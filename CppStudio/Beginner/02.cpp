@@ -15,16 +15,16 @@ int main()
         b=0,
         f =0;
 
-    cout << "Put a, b, f:" << std::endl;
+    cout << "Put a, b, f:" << endl;
     cin >> a >> b >> f;
 
     if(a == 0)
     {
-        cout << "Invalid a value. It can't be 0. Program exits." << std::endl;
+        cout << "Invalid a value. It can't be 0. Program exits." << endl;
         return 1;
     }
 
-    cout << "Calculating (а + b — f / а) + f * a * a — (a + b) ..." << std::endl
-        << (a + b - f / a) + f * a * a - (a + b) << std::endl;
+    cout << "Calculating (а + b — f / а) + f * a * a — (a + b) ..." << endl
+        << (a + b - f / a) + f * a * a - (a + b) << endl;
     return 0;
 }

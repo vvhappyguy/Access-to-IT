@@ -14,7 +14,7 @@ int main()
     
 
     char a = (char)number;
-    cout << a << std::endl;
+    cout << a << endl;
 
     return 0;
 }
