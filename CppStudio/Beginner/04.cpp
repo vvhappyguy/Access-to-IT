@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
     }
     
     kilometers = meters / 1000;
-    cout << meters << " metres equals " << kilometers << '\n';
+    cout << meters << " meters equals " << kilometers << '\n';
     
     return 0;
 }
