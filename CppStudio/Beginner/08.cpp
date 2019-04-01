@@ -62,7 +62,5 @@ int main()
         cout << "*";
     }
     cout << endl;
-    cout << sizeOfSecondString;
-
     return 0;
 }
