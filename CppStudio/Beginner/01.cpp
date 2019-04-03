@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
 
     for (int i = 1; i <= 5; ++i)
     {
-        cout << "[" << i << "] digit = " << number / temp << '\n';
+        cout << "[" << i << "] digit = " << number / temp << endl;
         number %= temp;
         temp /= 10;
     }
