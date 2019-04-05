@@ -12,6 +12,8 @@ using namespace std;
 int main (int argc, char* argv[])
 {
     double z = 1;
+    double tempX;
+    double tempSIN;
 
     for (double x = -1.1; x <= 0.3; x += 0.2)
     {
@@ -19,8 +21,8 @@ int main (int argc, char* argv[])
 
         for(int m = 1; m < 5; ++m)
         {
-            double tempX = 1;
-            double tempSIN = 1;
+            tempX = 1;
+            tempSIN = 1;
 
             for (int i = 0; i < m; ++i)
             {
