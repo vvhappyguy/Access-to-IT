@@ -11,7 +11,7 @@ using namespace std;
 int main (int argc , char * argv[])
 {
     constexpr double g = 9.8;
-    const double Pi = asin(1.0);
+    constexpr double Pi = 3.14159;
 
     double speed;
     double time;
@@ -35,7 +35,7 @@ int main (int argc , char * argv[])
         return 1;
     }
 
-    angle = asin((g * time) / (2 * speed) ) * (90/Pi);
+    angle = asin((g * time) / (2 * speed) ) * (180/Pi);
 
     cout << "Angle = " << angle;
 
