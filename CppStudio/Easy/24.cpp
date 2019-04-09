@@ -1,3 +1,10 @@
+// Compile with g++ (gcc ver. 8.2.0)
+// 24. Сумма 1/sin(1) + 1/(sin(1) + sin(2)) + … + 1/(sin(1)+sin(2)+…+sin(n))
+// Вычислить сумму 1/sin1+1/(sin1+sin2)+…1/(sin1+…+sinn),
+// где n — заданное натуральное число.
+// Input: n
+// Output: sum
+
 #include <iostream>
 #include <cmath>
 
