@@ -12,7 +12,7 @@ using namespace std;
 int main (int argc , char* argv[])
 {
     string set;
-    int pos;
+    size_t pos;
 
     cout << "Enter set of number : ";
     cin >> set; 
@@ -20,7 +20,8 @@ int main (int argc , char* argv[])
     cout << "Enter position of digit: ";
     cin >> pos;
 
-    if( (pos-1) >= set.size() || (pos-1) < 0)
+
+    if( (pos-1) >= set.size() || pos <= 0)
     {
         cout << "Digit with this position does not exist!";
         return 1;
