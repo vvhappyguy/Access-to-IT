@@ -7,7 +7,6 @@ Programming language : C++
 
 # Resources
 
-1. http://cppstudio.com/cat/285/ - CppStudio
-Solved tasks:
-https://github.com/vvhappyguy/Access-to-IT/tree/master/CppStudio
+1. [CppStudio](http://cppstudio.com/cat/285/)
+[Solved tasks](https://github.com/vvhappyguy/Access-to-IT/tree/master/CppStudio)
 
