@@ -34,7 +34,7 @@ int main()
     cout << "5 ballov" << endl;
     break;
     default : 
-    cout << "2 balla";
+    cout << "2 balla" << endl;
     break;
     }
     return 0;
