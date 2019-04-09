@@ -21,6 +21,11 @@ int main(int argc, char* argv[])
     string word;
     cout << "Enter the word: ";
     cin >> word;
+    if (word.length() != 5) 
+    {
+        cout << "The word must be 5 digit!" << endl;
+        return 1;
+    }
     if (palindr(word)) 
     {
         cout << "The word is a palindrome" << endl;
