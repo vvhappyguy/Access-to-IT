@@ -1,6 +1,7 @@
 //compiled with clang (10.0.1)
-//19. Программа палиндром в С++
-//Input: int n , float * n 
+//9. Дан одномерный массив, длину массива задаёт пользователь. 
+//Вычислить сумму квадратов тех чисел, модуль которых превышает значение 2,5.
+//Input: int n , (float) * n 
 //Output: float
 
 #include <iostream>
@@ -25,6 +26,7 @@ int main()
         }
     }
     cout << "Сумма чисел равна " << sum << endl;
+    delete [] massNumber;
 
     return 0;
 }
