@@ -4,14 +4,14 @@
 //Output : int
 
 #include <iostream>
-#include <cstring>
+#include <string>
 
 using namespace std;
 
 
 int main (int argc , char* argv[])
 {
-    char* set = new char;
+    string set;
     int pos;
 
     cout << "Enter set of number : ";
@@ -20,7 +20,7 @@ int main (int argc , char* argv[])
     cout << "Enter position of digit: ";
     cin >> pos;
 
-    if( (pos-1) >= strlen(set) || (pos-1) < 0)
+    if( (pos-1) >= set.size() || (pos-1) < 0)
     {
         cout << "Digit with this position does not exist!";
         return 1;
@@ -30,6 +30,5 @@ int main (int argc , char* argv[])
         cout << pos << " - digit of set = " << set[pos-1];
     } 
 
-    delete set;
     return 0;
 }
