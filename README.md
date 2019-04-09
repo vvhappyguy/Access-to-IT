@@ -14,4 +14,6 @@ Programming language : C++
 - [ ] **Complete CppStudio tasks.**
 - [x] Beginner
 - [x] Easy
+- [ ] Normal
+- [ ] Hard 
 - [ ] **Complete tasks from Stephen Prata "C++ Primer Plus (6th Edition)".**
