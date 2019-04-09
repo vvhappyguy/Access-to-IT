@@ -1,6 +1,6 @@
 //Compile with g++ (ver. 8.1.0)
 //Task : Сalculate function value : z(x,y) = (1-tg(x)) ^ ctg(x) + cos(x-y)
-//Input : int , int
+//Input : double , double
 //Output : int
 
 
