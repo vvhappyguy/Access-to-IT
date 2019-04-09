@@ -11,5 +11,7 @@ Programming language : C++
 
 ## Task List
 
-- [ ] Complete CppStudio tasks.
-- [ ] Complete tasks from Stephen Prata "C++ Primer Plus (6th Edition)".
+- [ ] **Complete CppStudio tasks.**
+- [x] Beginner
+- [x] Easy
+- [ ] **Complete tasks from Stephen Prata "C++ Primer Plus (6th Edition)".**
