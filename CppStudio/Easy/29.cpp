@@ -1,6 +1,6 @@
 //Compile with g++ (ver. 8.1.0)
 //Task : Determine that the number is integer.
-//Inpuf : double
+//Input : double
 //Output : string
 
 #include <iostream>

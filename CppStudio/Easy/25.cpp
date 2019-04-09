@@ -1,6 +1,6 @@
 //Compile with g++ (ver. 8.1.0)
 //Task : Find the sum of the numbers totally divisible by 5.
-//Inpuf : int
+//Input : int
 //Output : int
 
 #include <iostream>
