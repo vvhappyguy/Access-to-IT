@@ -1,3 +1,11 @@
+// Compile with g++ (gcc ver. 8.2.0)
+// 2. Алгебраическая сумма 1^k + 2^k + 3^k + ... + N^k
+// Найти алгебраическую сумму для выражения: 1^k + 2^k + 3^k + … + N^k. 
+// N и степень k вводит пользователь. 
+// Input: n, k
+// Output: sum
+
+
 #include <iostream>
 #include <cmath>
 
