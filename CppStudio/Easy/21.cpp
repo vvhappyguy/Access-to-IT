@@ -22,7 +22,21 @@ int main()
     << endl << "-> 2" << endl << "-> 3.5" << endl << "Ваш ответ: ";
     cin >> answer;
     if (answer == 2) points++;
-    cout << "Суммарное количество баллов: " << points << endl;
+    switch (points)
+    {
+    case 1: 
+    cout << "3 balla" << endl;
+    break;
+    case 2:
+    cout << "4 balla" << endl;
+    break;
+    case 3:
+    cout << "5 ballov" << endl;
+    break;
+    default : 
+    cout << "2 balla";
+    break;
+    }
     return 0;
 
 }
