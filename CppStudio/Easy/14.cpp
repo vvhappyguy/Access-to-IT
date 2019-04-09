@@ -1,6 +1,6 @@
 //Compile with g++ (ver. 8.1.0)
 //Task : Determine how many new strings in the text.
-//Output : string
+//Output : int
 
 #include <iostream>
 

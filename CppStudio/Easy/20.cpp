@@ -1,8 +1,8 @@
 //Compile with g++ (ver. 8.1.0)
 //Task : Сalculate function value : y = ctg^2(ln(x))
 //      For x from [a,b] with step h.
-//input : int , int , int
-//Output : int
+//input : double , double , double
+//Output : double
 
 #include <iostream>
 #include <cmath>

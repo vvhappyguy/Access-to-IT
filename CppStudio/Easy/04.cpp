@@ -1,7 +1,7 @@
 //Compile with g++ (ver. 8.1.0)
 //Task : Сalculate angle value.
-//Input : int , int
-//Output : int
+//Input : double , double
+//Output : double
 
 #include <iostream>
 #include <cmath>
