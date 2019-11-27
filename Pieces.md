@@ -1,0 +1,3 @@
+- [ ] Calling conventions
+- [ ] Cmake
+- [ ] Lock-free programming
