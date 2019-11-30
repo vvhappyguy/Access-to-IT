@@ -1,3 +1,15 @@
 - [ ] Calling conventions
 - [ ] Cmake
 - [ ] Lock-free programming
+- [ ] Difference between const_cast and static_cast.
+- [ ] dynamic_cast -  RunTimeTypeInformation
+- [ ] Slab allocation
+- [ ] Good and bad in REST API
+- [ ] How much times of preprocessor in C/C++ compilers.
+- [ ] Hash-functions without collisions
+- [ ] VI-model
+- [ ] UML
+- [ ] Lazy evaluation
+- [ ] misra c
+- [ ] .ctors section
+- [ ] strucuture of object file
