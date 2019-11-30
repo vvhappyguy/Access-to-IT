@@ -17,3 +17,7 @@ Programming language : C++
 - [ ] Normal
 - [ ] Hard 
 - [ ] **Complete tasks from Stephen Prata "C++ Primer Plus (6th Edition)".**
+
+## Pieces
+
+1. [Pieces](https://github.com/vvhappyguy/Access-to-IT/blob/master/Pieces.md)
