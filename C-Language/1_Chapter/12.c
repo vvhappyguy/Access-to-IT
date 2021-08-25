@@ -8,7 +8,7 @@ int main()
 		if(c == '\t' || c == ' ') 
 			putchar('\n');
 		else
-	            putchar(c);
+	        putchar(c);
 	}
 	return 0;
 }

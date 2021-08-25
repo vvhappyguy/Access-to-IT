@@ -46,7 +46,7 @@ int main(void)
 		{
 			putchar(lastSymbols[0]);
 		}
-		state += 1;
+		state += 1;		
 	}
 	return 0;
 }
