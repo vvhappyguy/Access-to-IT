@@ -6,8 +6,6 @@
 using namespace std;
 
 vector<int> twoSum(vector<int>& nums, int target) {
-        vector<int> result;
-
         unordered_map<int, int> hashMap;
         int currentIndex = 0;
         for(const auto& num: nums)        
@@ -23,7 +21,7 @@ vector<int> twoSum(vector<int>& nums, int target) {
             }
             currentIndex++;
         }
-    return result;
+        return {};
 }
 
 void printVector(const vector<int>&nums)
