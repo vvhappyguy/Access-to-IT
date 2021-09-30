@@ -192,10 +192,11 @@ int main(int args, char *argv[])
     // }
 
     // std::cout << "Empty = " << empty;
-    // const int before = empty;
+    const int before = empty;
 
     int lastEmpty = empty;
     int cycles = 0;
+    int tries = 0;
     while (empty != 0)
     {
         cycles += 1;
@@ -205,7 +206,12 @@ int main(int args, char *argv[])
         putIn(table);
         if (empty == lastEmpty)
         {
-            break;
+            tries++;
+            if (tries == 5)
+            {
+                tries = 0;
+                break;
+            }
         }
         else
         {
@@ -223,11 +229,24 @@ int main(int args, char *argv[])
         }
         std::cout << std::endl;
     }
-    if(empty != 0)
+    if (empty != 0)
     {
         std::cout << "Can't solve this" << std::endl;
     }
-    // std::cout << "Empty = " << empty << " of before " << before << std::endl
-    //           << cycles << std::endl;
+    std::cout << "Empty = " << empty << " of before " << before << std::endl
+              << cycles << std::endl;
+    for (const auto rowNumber : table)
+    {
+        for (const auto elem : rowNumber)
+        {
+            if (elem.possibleVariants.size() <= 2)
+            {
+                for (const auto n : elem.possibleVariants)
+                {
+                    std::cout << n << std::endl;
+                }
+            }
+        }
+    }
     return 0;
 }
