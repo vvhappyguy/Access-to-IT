@@ -1,23 +1,22 @@
 # Access-to-IT
 
-## Description 
+## Description
 
-There will be solved tasks and exercises from different resources.
-Programming language : C++
+Repository created for practicing different technologies and programming languages.
+It contains a lot of unstructered things.
+So there will be solved tasks and exercises from different resources.
+Programming language : C/C++/Python (Haskell/Rust/Ada/Assembler soon).
 
-## Resources
+## Topics
 
-1. [CppStudio](http://cppstudio.com/cat/285/)   ([Solved tasks](https://github.com/vvhappyguy/Access-to-IT/tree/master/CppStudio))
+### Worth a look
 
-## Task List
+- [Leetcode](./leetcode/README.md) - solved leetcode tasks.
+- [Sudoku](./sudoku/main.cpp) - basic sudoku solver (without predictions). Developed on paper during military school lessons then implemented here :-) .
 
-- [ ] **Complete CppStudio tasks.**
-- [x] Beginner
-- [x] Easy
-- [ ] Normal
-- [ ] Hard 
-- [ ] **Complete tasks from Stephen Prata "C++ Primer Plus (6th Edition)".**
+### Random thinhgs
 
-## Pieces
-
-1. [Pieces](https://github.com/vvhappyguy/Access-to-IT/blob/master/Pieces.md)
+- [Pieces](https://github.com/vvhappyguy/Access-to-IT/blob/master/Pieces.md) - list of topics to learn.
+- [C-Language](./C-Language/README.md) - tasks from `C Language K&R` book.
+- [CodeForces](./codeforces/) - bad tries to solve codeforces tasks.
+- [Random shit](./tmp/) - ... .
