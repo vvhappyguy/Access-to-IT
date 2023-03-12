@@ -8,7 +8,12 @@
 
 ## Tasks
 
-- [x] `1. Two sum` - [link]()
+- [x] `102. Binary Tree Level Order Traversal` - [link](leetcode.com/problems/binary-tree-level-order-traversal/)
+    ✅[C++ solution](./tree.cpp): (search lc 102) - 2023/03/12 - without recursion
+    🔜[C++ solution](): add solution with recursion (it's better by time but worse by memory).
+- [x] `637. Average of Levels in Binary Tree` - [link](leetcode.com/problems/average-of-levels-in-binary-tree/)
+    ✅[C++ solution](./tree.cpp): (search lc 637) - 2022/09/02 - without tests
+- [x] `1. Two sum` - [link](leetcode.com/problems/two-sum/)
     ✅[C solution](./1/1.c) - 2021/02/17
     ✅[C++ solution](./1/1.c) - 2021/10/01
 - [x] `2. Add Two Numbers` - [link](https://leetcode.com/problems/add-two-numbers/)
@@ -23,4 +28,5 @@
 - [x] `20. Valid Parentheses` - [link](leetcode.com/problems/valid-parentheses/)
     ✅[C++ solution](./20/20.cpp) without tests - 2022/08/17
 
-TODO: Add the same descriptions for all tasks
+
+TODO: Add the same descriptions for all tasks + sort by first time compelition.

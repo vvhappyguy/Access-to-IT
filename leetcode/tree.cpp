@@ -5,11 +5,12 @@
 #include <map>
 #include <stack>
 #include <utility>
+#include <queue>
 #include <vector>
 
 using namespace std;
 
-#include "../header/struct.hpp"
+#include "header/struct.hpp"
 
 void printTree(TreeNode *root, string prefix);
 
@@ -446,6 +447,88 @@ void start109() {
   printTree(res, "");
 }
 
+// lc 637
+vector<double> averageOfLevels(TreeNode *root) {
+  vector<double> res;
+  if (!root) return res;
+
+  queue<TreeNode *> q;
+  q.push(root);
+  TreeNode *cur;
+  double sum;
+  int s;
+
+  while (!q.empty()) {
+    s = q.size();
+    sum = 0.0;
+    for (int i = 0; i < s; i++) {
+      cur = q.front();
+      q.pop();
+      sum += cur->val;
+      if (cur->left) q.push(cur->left);
+      if (cur->right) q.push(cur->right);
+    }
+    res.push_back(sum / s);
+  }
+
+  return res;
+}
+
+// lc 102
+vector<vector<int>> levelOrder(TreeNode *root) {
+  if (root == nullptr) {
+    return {};
+  }
+
+  vector<vector<int>> res;
+  queue<TreeNode *> q;
+  q.push(root);
+  while (!q.empty()) {
+    vector<int> level;
+    size_t size = q.size();
+    for (int i = 0; i < size; i++) {
+      TreeNode *cur = q.front();
+      q.pop();
+      level.push_back(cur->val);
+      if (cur->left != nullptr) q.push(cur->left);
+      if (cur->right != nullptr) q.push(cur->right);
+    }
+    res.push_back(level);
+  }
+  return res;
+}
+
+void start102()
+{
+  TreeNode root;
+  TreeNode a;
+  TreeNode b;
+  TreeNode aa;
+  TreeNode ab;
+  TreeNode bb;
+  root.val = 0;
+  root.left = &a;
+  root.right = &b;
+  a.val = 1;
+  a.left = &aa;
+  a.right = &ab;
+  aa.val = 3;
+  ab.val = 4;
+  b.val = 2;
+  b.left = &bb;
+  bb.val = 100;
+
+  auto res = levelOrder(&root);
+  for(const auto& v: res)
+  {
+    for(const auto& n: v)
+    {
+      cout << n << ' ';
+    }
+    cout << endl;
+  }
+}
+
 // TODO:
 // https://leetcode.com/problems/insert-into-a-binary-search-tree/
 // https://leetcode.com/problems/serialize-and-deserialize-binary-tree/
@@ -504,7 +587,8 @@ int main() {
   // start98();
   // start94();
   // start876();
-  start109();
+  // start109();
+  start102();
 
   return 0;
 }
