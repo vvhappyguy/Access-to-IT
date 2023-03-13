@@ -8,6 +8,9 @@
 
 ## Tasks
 
+- [x] `101. Symmetric Tree` - [link](leetcode.com/problems/symmetric-tree/)
+    ✅[C++ solution](./tree.cpp): (search lc 101 - isSymmetric) - 2023/03/13 - without recursion.
+    ✅[C++ solution](./tree.cpp): (searhc lc 101 - isSymmetricRec) - 2023/03/13 - recursion.
 - [x] `102. Binary Tree Level Order Traversal` - [link](leetcode.com/problems/binary-tree-level-order-traversal/)
     ✅[C++ solution](./tree.cpp): (search lc 102) - 2023/03/12 - without recursion
     🔜[C++ solution](): add solution with recursion (it's better by time but worse by memory).

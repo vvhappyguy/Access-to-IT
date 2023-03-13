@@ -3,9 +3,9 @@
 #include <limits>
 #include <list>
 #include <map>
+#include <queue>
 #include <stack>
 #include <utility>
-#include <queue>
 #include <vector>
 
 using namespace std;
@@ -498,8 +498,7 @@ vector<vector<int>> levelOrder(TreeNode *root) {
   return res;
 }
 
-void start102()
-{
+void start102() {
   TreeNode root;
   TreeNode a;
   TreeNode b;
@@ -519,21 +518,90 @@ void start102()
   bb.val = 100;
 
   auto res = levelOrder(&root);
-  for(const auto& v: res)
-  {
-    for(const auto& n: v)
-    {
+  for (const auto &v : res) {
+    for (const auto &n : v) {
       cout << n << ' ';
     }
     cout << endl;
   }
 }
 
+// lc 101
+bool isSymmetric(TreeNode *root) {
+  queue<TreeNode *> q;
+  q.push(root);
+  while (!q.empty()) {
+    vector<int> level;
+    size_t size = q.size();
+    for (int i = 0; i < size; i++) {
+      TreeNode *cur = q.front();
+      q.pop();
+      if (cur->left != nullptr) {
+        q.push(cur->left);
+        level.push_back(cur->left->val);
+      } else {
+        level.push_back(-101);  // some val under constraints
+      }
+      if (cur->right != nullptr) {
+        q.push(cur->right);
+        level.push_back(cur->right->val);
+      } else {
+        level.push_back(-101);  // some val under constraints
+      }
+    }
+    for (int i = 0; i < level.size() / 2; i++) {
+      if (level[i] != level[level.size() - 1 - i]) {
+        return false;
+      }
+    }
+  }
+  return true;
+}
+
+bool step101(TreeNode *node1, TreeNode *node2) {
+  if (node1 == nullptr || node2 == nullptr) return node1 == node2;
+
+  if (node1->val != node2->val) return false;
+
+  return step101(node1->left, node2->right) && step101(node1->right, node2->left);
+}
+
+bool isSymmetricRec(TreeNode *root) {
+  return step101(root->left, root->right);
+}
+
+void start101() {
+  TreeNode root;
+  TreeNode a;
+  TreeNode b;
+  TreeNode aa;
+  TreeNode ab;
+  TreeNode bb;
+  TreeNode ba;
+  root.val = 0;
+  root.left = &a;
+  root.right = &b;
+  a.val = 1;
+  a.left = &aa;
+  a.right = &ab;
+  aa.val = 2;
+  ab.val = 3;
+  b.val = 1;
+  b.right = &bb;
+  b.left = &ba;
+  bb.val = 2;
+  ba.val = 3;
+
+  cout << isSymmetric(&root) << endl;
+
+  ba.val = 10;
+  cout << isSymmetric(&root) << endl;
+}
+
 // TODO:
 // https://leetcode.com/problems/insert-into-a-binary-search-tree/
 // https://leetcode.com/problems/serialize-and-deserialize-binary-tree/
 // https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/
-// https://leetcode.com/problems/binary-tree-level-order-traversal/
 // https://leetcode.com/problems/flatten-nested-list-iterator/
 // https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/
 // https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/
@@ -588,7 +656,7 @@ int main() {
   // start94();
   // start876();
   // start109();
-  start102();
-
+  // start102();
+  start101();
   return 0;
 }
