@@ -1,7 +1,7 @@
-//compiled with clang (10.0.1)
-//5. Возведение числа в степень
-//Input: int, int 
-//Output: int
+// compiled with clang (10.0.1)
+// 5. Возведение числа в степень
+// Input: int, int
+// Output: int
 
 #include <iostream>
 using namespace std;
@@ -19,20 +19,19 @@ int main()
         cout << "Введите неотрицательное число!" << endl;
         return 1;
     }
-    switch(power)
+    switch (power)
     {
         case 0:
-        cout << "number = 1" << endl;
-        break;
+            cout << "number = 1" << endl;
+            break;
         default:
-        for(int i = 0; i < power; i++)
-        {
-            result *= number;
-        }
-        cout << "number = " << result << endl;
-        break;
+            for (int i = 0; i < power; i++)
+            {
+                result *= number;
+            }
+            cout << "number = " << result << endl;
+            break;
     }
-    
-    
+
     return 0;
 }

@@ -11,7 +11,6 @@ int main()
 {
     int number = 0;
     cin >> number;
-    
 
     char a = (char)number;
     cout << a << endl;

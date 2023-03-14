@@ -1,16 +1,16 @@
-//compiled with clang (10.0.1)
-//28. Точки пересечений линий
-//Input: 5 floats 
-//Output: string 
+// compiled with clang (10.0.1)
+// 28. Точки пересечений линий
+// Input: 5 floats
+// Output: string
 
-#include <iostream> 
 #include <cmath>
+#include <iostream>
 using namespace std;
 
 int main()
 {
     float a, b, c, d, k, crossPoint1, crossPoint2, discr;
-    
+
     cout << "Введите коэффициенты функции ax^2 + bx + c: " << endl;
     cout << "Коэффициент a: ";
     cin >> a;
@@ -29,16 +29,16 @@ int main()
     switch (discr > 0 ? 1 : discr == 0 ? 2 : 3)
     {
         case 1:
-        cout << "Функции пересекаются в точках: ";
-        cout << "[ " << crossPoint1 << ", " << k * crossPoint1 + d << " ]";
-        cout << " [ " << crossPoint2 << ", " << k * crossPoint2 + d << " ]" << endl;
-        break;
+            cout << "Функции пересекаются в точках: ";
+            cout << "[ " << crossPoint1 << ", " << k * crossPoint1 + d << " ]";
+            cout << " [ " << crossPoint2 << ", " << k * crossPoint2 + d << " ]" << endl;
+            break;
         case 2:
-        cout << "Функции пересекаются в точке: ";
-        cout << "[ " << crossPoint1 << ", " << k * crossPoint1 + d << " ]" << endl;
-        break;
+            cout << "Функции пересекаются в точке: ";
+            cout << "[ " << crossPoint1 << ", " << k * crossPoint1 + d << " ]" << endl;
+            break;
         case 3:
-        cout << "Функции не пересекаются" << endl;
+            cout << "Функции не пересекаются" << endl;
     }
     return 0;
 }

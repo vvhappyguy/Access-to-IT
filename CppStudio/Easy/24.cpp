@@ -5,8 +5,8 @@
 // Input: n
 // Output: sum
 
-#include <iostream>
 #include <cmath>
+#include <iostream>
 
 using namespace std;
 
@@ -21,7 +21,7 @@ int main()
     double_t sum = 0;
     double_t sin_sum = 0;
 
-    for(size_t i = 1; i <= n; i++)
+    for (size_t i = 1; i <= n; i++)
     {
         sin_sum += sin(i * PI / 180);
         sum += 1 / sin_sum;

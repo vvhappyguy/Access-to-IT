@@ -1,5 +1,6 @@
 #include <iostream>
 
-void doNothing() {
+void doNothing()
+{
     std::cout << __FUNCTION__ << std::endl;
 }

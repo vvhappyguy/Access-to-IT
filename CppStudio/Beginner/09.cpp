@@ -1,7 +1,7 @@
-//compiled with clang (10.0.1)
-//9. Сравнение чисел используя оператор ветвления
-//Input: 2 ints
-//Output: string
+// compiled with clang (10.0.1)
+// 9. Сравнение чисел используя оператор ветвления
+// Input: 2 ints
+// Output: string
 
 #include <iostream>
 using namespace std;

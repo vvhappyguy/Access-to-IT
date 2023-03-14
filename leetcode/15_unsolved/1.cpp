@@ -1,15 +1,17 @@
-#include <vector>
-#include <iostream>
-#include <cmath>
 #include <algorithm>
+#include <cmath>
+#include <iostream>
+#include <vector>
 
 using namespace std;
 
 void printVector(vector<int>& nums);
 
-class Solution {
+class Solution
+{
 public:
-    vector<vector<int>> threeSum(vector<int>& nums) {
+    vector<vector<int>> threeSum(vector<int>& nums)
+    {
         vector<vector<int>> result;
         printVector(nums);
         std::sort(nums.begin(), nums.end());
@@ -20,11 +22,11 @@ public:
         int firstNegativeIndex = -1;
         int firstZeroIndex = -1;
         int firstPositiveIndex = -1;
-        for(int i = 0; i < nums.size(); i++)
+        for (int i = 0; i < nums.size(); i++)
         {
-            if(nums[i] < 0)
+            if (nums[i] < 0)
             {
-                if(firstNegativeIndex == -1)
+                if (firstNegativeIndex == -1)
                 {
                     firstNegativeIndex = i;
                 }
@@ -32,7 +34,7 @@ public:
             }
             else if (nums[i] > 0)
             {
-                if(firstPositiveIndex == -1)
+                if (firstPositiveIndex == -1)
                 {
                     firstPositiveIndex = i;
                 }
@@ -40,16 +42,16 @@ public:
             }
             else
             {
-                if(firstZeroIndex == -1)
+                if (firstZeroIndex == -1)
                 {
                     firstZeroIndex = i;
                 }
                 zeroCount += 1;
             }
         }
-        if(zeroCount == 0)
+        if (zeroCount == 0)
         {
-            if(negativeCount == 0 || positiveCount == 0)
+            if (negativeCount == 0 || positiveCount == 0)
             {
                 return result;
             }
@@ -58,8 +60,8 @@ public:
              << "ZeroCount=" << zeroCount << endl
              << "NegativeCount=" << negativeCount << endl
              << "FirstNegativeIndex=" << firstNegativeIndex << endl
-              << "FirstZeroIndex=" << firstZeroIndex << endl
-              << "FirstPositiveIndex=" << firstPositiveIndex << endl;
+             << "FirstZeroIndex=" << firstZeroIndex << endl
+             << "FirstPositiveIndex=" << firstPositiveIndex << endl;
 
         return result;
     }
@@ -67,7 +69,7 @@ public:
 
 void printVector(vector<int>& nums)
 {
-    for(const auto& num: nums)
+    for (const auto& num : nums)
         cout << num << ' ';
 
     cout << endl;
@@ -76,7 +78,7 @@ void printVector(vector<int>& nums)
 int main()
 {
     Solution s;
-    vector<int> test = {7,1,5,3,6,4};
+    vector<int> test = {7, 1, 5, 3, 6, 4};
     s.threeSum(test);
     printVector(test);
     return 0;

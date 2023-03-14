@@ -4,18 +4,18 @@
 // Output: console picture of house.
 
 #include <iostream>
- 
+
 using namespace std;
- 
+
 int main()
 {
- cout << "\t    /  \\\n"
-    << "\t   /    \\\n"
-    << "\t  /------\\\n"
-    << "\t / |    | \\\n"
-    << "\t   |    |   \n"
-    << "\t   |    |    \n"
-    << "\t   |____|     \n";
- 
- return 0;
+    cout << "\t    /  \\\n"
+         << "\t   /    \\\n"
+         << "\t  /------\\\n"
+         << "\t / |    | \\\n"
+         << "\t   |    |   \n"
+         << "\t   |    |    \n"
+         << "\t   |____|     \n";
+
+    return 0;
 }

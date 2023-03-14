@@ -1,14 +1,14 @@
-//Compile with g++ (ver. 8.1.0)
-//Task : Сalculate angle value.
-//Input : double , double
-//Output : double
+// Compile with g++ (ver. 8.1.0)
+// Task : Сalculate angle value.
+// Input : double , double
+// Output : double
 
-#include <iostream>
 #include <cmath>
+#include <iostream>
 
 using namespace std;
 
-int main (int argc , char * argv[])
+int main(int argc, char* argv[])
 {
     constexpr double g = 9.8;
     constexpr double Pi = 3.14159;
@@ -20,7 +20,7 @@ int main (int argc , char * argv[])
     cout << "Enter V: ";
     cin >> speed;
 
-    if(speed < 0)
+    if (speed < 0)
     {
         cout << "Incorrect speed, must be positive!";
         return 1;
@@ -29,13 +29,13 @@ int main (int argc , char * argv[])
     cout << "Enter T: ";
     cin >> time;
 
-    if(time < 0)
+    if (time < 0)
     {
         cout << "Incorrect time, must be positive!";
         return 1;
     }
 
-    angle = asin((g * time) / (2 * speed) ) * (180/Pi);
+    angle = asin((g * time) / (2 * speed)) * (180 / Pi);
 
     cout << "Angle = " << angle;
 

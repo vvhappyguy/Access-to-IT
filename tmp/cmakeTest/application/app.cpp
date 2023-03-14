@@ -1,5 +1,5 @@
-#include <test/check.hpp>
 #include <iostream>
+#include <test/check.hpp>
 
 int main()
 {

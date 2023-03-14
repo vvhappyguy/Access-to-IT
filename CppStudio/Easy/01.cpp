@@ -1,13 +1,13 @@
 // Compile with g++ (gcc ver. 8.2.0)
 // 1. Алгебраическая сумма
-// Найти Y, если Y = X1 + X2 + … + Xn,   X = Z^3 - B + A^2 / tg^2?. 
-// Количество X вводятся пользователем программы. 
+// Найти Y, если Y = X1 + X2 + … + Xn,   X = Z^3 - B + A^2 / tg^2?.
+// Количество X вводятся пользователем программы.
 // Для каждого X значения Z, B, А, ? разные (вводятся пользователем программы).
 // Input: count, count * (z, b, a, ?)
 // Output: (float) y
 
-#include <iostream>
 #include <cmath>
+#include <iostream>
 
 using namespace std;
 
@@ -24,11 +24,11 @@ int main()
     float* x_array = new float[count];
     float* y = new float;
 
-    for(size_t i = 0; i < count; i++)
+    for (size_t i = 0; i < count; i++)
     {
         cout << "Enter z, b, a, angle values: ";
         cin >> *z >> *b >> *a >> *angle;
-        x_array[i] = pow(*z, 3) + pow(*a / tan(*angle),2) - *b;
+        x_array[i] = pow(*z, 3) + pow(*a / tan(*angle), 2) - *b;
         *y += x_array[i];
     }
 
@@ -38,7 +38,7 @@ int main()
     delete a;
     delete angle;
     delete y;
-    delete []x_array;
+    delete[] x_array;
 
     return 0;
 }

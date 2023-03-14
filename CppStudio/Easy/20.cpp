@@ -1,16 +1,15 @@
-//Compile with g++ (ver. 8.1.0)
-//Task : Сalculate function value : y = ctg^2(ln(x))
-//      For x from [a,b] with step h.
-//input : double , double , double
-//Output : double
+// Compile with g++ (ver. 8.1.0)
+// Task : Сalculate function value : y = ctg^2(ln(x))
+//       For x from [a,b] with step h.
+// input : double , double , double
+// Output : double
 
-#include <iostream>
 #include <cmath>
+#include <iostream>
 
 using namespace std;
 
-
-int main (int argc , char* argv[])
+int main(int argc, char* argv[])
 {
     double y;
     double h;
@@ -18,16 +17,15 @@ int main (int argc , char* argv[])
     double b;
 
     cout << "Enter bounds for x [a,b] : ";
-    cin >> a >> b; 
+    cin >> a >> b;
 
-
-    if(a <= 0) 
+    if (a <= 0)
     {
         cout << "For Ln(x) , x must be positive!";
         return 1;
     }
 
-    if(a > b) 
+    if (a > b)
     {
         cout << "Incorrect segment, 'a' must be less then 'b'. ";
         return 1;
@@ -36,7 +34,7 @@ int main (int argc , char* argv[])
     cout << "Enter step for this bounds: ";
     cin >> h;
 
-    if(h > abs(a-b))
+    if (h > abs(a - b))
     {
         cout << "Step must be less then |a-b|.";
         return 1;
@@ -44,9 +42,9 @@ int main (int argc , char* argv[])
 
     cout << "y = ";
 
-    for(a; a < b; a += h)
+    for (a; a < b; a += h)
     {
-        y = pow( cos(log(a)) / sin(log(a)) , 2);
+        y = pow(cos(log(a)) / sin(log(a)), 2);
         cout << y << "; ";
     }
 

@@ -1,7 +1,7 @@
-//compiled with clang (10.0.1)
-//31. Циклическое вычисление суммы чисел
-//Input: int 
-//Output: int 
+// compiled with clang (10.0.1)
+// 31. Циклическое вычисление суммы чисел
+// Input: int
+// Output: int
 
 #include <iostream>
 using namespace std;

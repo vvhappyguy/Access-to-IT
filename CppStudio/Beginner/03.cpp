@@ -3,8 +3,8 @@
 // Input: char
 // Output: char
 
-#include <iostream>
 #include <cctype>
+#include <iostream>
 
 using namespace std;
 

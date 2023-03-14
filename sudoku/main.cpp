@@ -1,8 +1,8 @@
-#include <iostream>
-#include <vector>
 #include <algorithm>
-#include <string>
 #include <array>
+#include <iostream>
+#include <string>
+#include <vector>
 
 const int kRows = 9;
 const int kColumn = 9;
@@ -14,22 +14,28 @@ int empty = kRows * kColumn;
 class Node
 {
 public:
-    Node(){};
-    friend bool operator==(const Node &lhs, const Node &rhs) { return &lhs.value == &rhs.value; };
-    friend bool operator!=(const Node &lhs, const Node &rhs) { return !(lhs == rhs); };
+    Node() {};
+    friend bool operator==(const Node& lhs, const Node& rhs)
+    {
+        return &lhs.value == &rhs.value;
+    };
+    friend bool operator!=(const Node& lhs, const Node& rhs)
+    {
+        return !(lhs == rhs);
+    };
     int value = 0;
-    std::vector<Node> *row;
+    std::vector<Node>* row;
     // std::vector<Node &> *column;
     // std::vector<Node &> *square;
     std::vector<int> possibleVariants = {1, 2, 3, 4, 5, 6, 7, 8, 9};
 };
 
-void analyzeLines(std::vector<std::vector<Node>> &table)
+void analyzeLines(std::vector<std::vector<Node>>& table)
 {
     // Analyze lines
-    for (auto &row : table)
+    for (auto& row : table)
     {
-        for (auto &elem : row)
+        for (auto& elem : row)
         {
             if (elem.value == 0)
             {
@@ -39,7 +45,9 @@ void analyzeLines(std::vector<std::vector<Node>> &table)
                     {
                         if (near.value != 0)
                         {
-                            elem.possibleVariants.erase(std::remove(elem.possibleVariants.begin(), elem.possibleVariants.end(), near.value), elem.possibleVariants.end());
+                            elem.possibleVariants.erase(
+                                std::remove(elem.possibleVariants.begin(), elem.possibleVariants.end(), near.value),
+                                elem.possibleVariants.end());
                         }
                     }
                 }
@@ -48,26 +56,26 @@ void analyzeLines(std::vector<std::vector<Node>> &table)
     }
 }
 
-void analyzeColumns(std::vector<std::vector<Node>> &table)
+void analyzeColumns(std::vector<std::vector<Node>>& table)
 {
     // Analyze columns
     int rowE = 0, colE = 0;
     int rowComp = 0, colComp = 0;
 
-    for (auto &row : table)
+    for (auto& row : table)
     {
         rowE++;
-        for (auto &elem : row)
+        for (auto& elem : row)
         {
             colE = (colE + 1) % 9;
             if (elem.value == 0)
             {
-                //std::cout << "Elem[" << rowE << "][" << colE << "]" << std::endl;
-                for (const auto &rowC : table)
+                // std::cout << "Elem[" << rowE << "][" << colE << "]" << std::endl;
+                for (const auto& rowC : table)
                 {
                     rowComp++;
 
-                    for (const auto &near : rowC)
+                    for (const auto& near : rowC)
                     {
                         colComp = (colComp + 1) % 9;
                         if (near != elem)
@@ -76,7 +84,10 @@ void analyzeColumns(std::vector<std::vector<Node>> &table)
                             {
                                 if (colComp == colE)
                                 {
-                                    elem.possibleVariants.erase(std::remove(elem.possibleVariants.begin(), elem.possibleVariants.end(), near.value), elem.possibleVariants.end());
+                                    elem.possibleVariants.erase(std::remove(elem.possibleVariants.begin(),
+                                                                            elem.possibleVariants.end(),
+                                                                            near.value),
+                                                                elem.possibleVariants.end());
                                 }
                             }
                         }
@@ -89,26 +100,26 @@ void analyzeColumns(std::vector<std::vector<Node>> &table)
     }
 }
 
-void analyzeSquares(std::vector<std::vector<Node>> &table)
+void analyzeSquares(std::vector<std::vector<Node>>& table)
 {
     // Analyze columns
     int rowE = 0, colE = 0;
     int rowComp = 0, colComp = 0;
 
-    for (auto &row : table)
+    for (auto& row : table)
     {
         rowE++;
-        for (auto &elem : row)
+        for (auto& elem : row)
         {
             colE++;
             if (elem.value == 0)
             {
-                //std::cout << "Elem[" << rowE << "][" << colE << "]" << std::endl;
-                for (const auto &rowC : table)
+                // std::cout << "Elem[" << rowE << "][" << colE << "]" << std::endl;
+                for (const auto& rowC : table)
                 {
                     rowComp++;
 
-                    for (const auto &near : rowC)
+                    for (const auto& near : rowC)
                     {
                         colComp++;
                         if (near != elem)
@@ -121,7 +132,10 @@ void analyzeSquares(std::vector<std::vector<Node>> &table)
                                     {
                                         // std::cout << "1: " << rowComp << " " << colComp << std::endl;
                                         // std::cout << rowE << " " << colE << std::endl;
-                                        elem.possibleVariants.erase(std::remove(elem.possibleVariants.begin(), elem.possibleVariants.end(), near.value), elem.possibleVariants.end());
+                                        elem.possibleVariants.erase(std::remove(elem.possibleVariants.begin(),
+                                                                                elem.possibleVariants.end(),
+                                                                                near.value),
+                                                                    elem.possibleVariants.end());
                                     }
                                 }
                             }
@@ -136,14 +150,14 @@ void analyzeSquares(std::vector<std::vector<Node>> &table)
     }
 }
 
-void putIn(std::vector<std::vector<Node>> &table)
+void putIn(std::vector<std::vector<Node>>& table)
 {
     // Put in-ing
     int i = 0, j = 0;
-    for (auto &row : table)
+    for (auto& row : table)
     {
         i++;
-        for (auto &elem : row)
+        for (auto& elem : row)
         {
             j++;
             if (elem.value == 0 && elem.possibleVariants.size() == 1)
@@ -156,7 +170,7 @@ void putIn(std::vector<std::vector<Node>> &table)
     }
 }
 
-int main(int args, char *argv[])
+int main(int args, char* argv[])
 {
     std::vector<std::vector<Node>> table;
 
@@ -220,7 +234,7 @@ int main(int args, char *argv[])
     }
 
     // // Just output
-    //std::cout << std::endl;
+    // std::cout << std::endl;
     for (const auto rowNumber : table)
     {
         for (const auto elem : rowNumber)
@@ -233,8 +247,7 @@ int main(int args, char *argv[])
     {
         std::cout << "Can't solve this" << std::endl;
     }
-    std::cout << "Empty = " << empty << " of before " << before << std::endl
-              << cycles << std::endl;
+    std::cout << "Empty = " << empty << " of before " << before << std::endl << cycles << std::endl;
     for (const auto rowNumber : table)
     {
         for (const auto elem : rowNumber)

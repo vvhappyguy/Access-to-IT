@@ -1,13 +1,13 @@
-#include <iostream>
-#include <vector>
 #include <cmath>
-#include <queue>
 #include <function>
+#include <iostream>
+#include <queue>
+#include <vector>
 
 using namespace std;
 
 // Time limit - need to learn heap + priority queue
-int minStoneSumVector(vector<int> &piles, int k)
+int minStoneSumVector(vector<int>& piles, int k)
 {
     int max_value, max_index;
     int sum = 0;
@@ -35,7 +35,7 @@ int minStoneSumVector(vector<int> &piles, int k)
 }
 
 // Works: 92% runtime - 5% memory - 10:05-10:35
-int minStoneSumHeap1(vector<int> &piles, int k)
+int minStoneSumHeap1(vector<int>& piles, int k)
 {
     std::priority_queue<int> q1;
     int sum = 0;
@@ -59,7 +59,7 @@ int minStoneSumHeap1(vector<int> &piles, int k)
 }
 
 // Works: 80% runtime - 84% memory
-int minStoneSum(vector<int> &piles, int k)
+int minStoneSum(vector<int>& piles, int k)
 {
     std::priority_queue<int> q1(piles.begin(), piles.end());
 
@@ -82,7 +82,7 @@ int minStoneSum(vector<int> &piles, int k)
 
 // Best memory from leetcode
 // Nice c++-styled code
-int minStoneSum(vector<int> &piles, int k)
+int minStoneSum(vector<int>& piles, int k)
 {
     make_heap(begin(piles), end(piles));
     while (--k >= 0)
@@ -98,7 +98,7 @@ int minStoneSum(vector<int> &piles, int k)
 
 // Best runtime from leetcode
 // Values are like indexes
-int minStoneSum(vector<int> &piles, int k)
+int minStoneSum(vector<int>& piles, int k)
 {
     int counts[1'0000 + 10] = {};
 

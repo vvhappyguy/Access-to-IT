@@ -1,15 +1,14 @@
-//Compile with g++ (ver. 8.1.0)
-//Task : Сalculate function value : z(x,y) = (1-tg(x)) ^ ctg(x) + cos(x-y)
-//Input : double , double
-//Output : int
+// Compile with g++ (ver. 8.1.0)
+// Task : Сalculate function value : z(x,y) = (1-tg(x)) ^ ctg(x) + cos(x-y)
+// Input : double , double
+// Output : int
 
-
-#include <iostream>
 #include <cmath>
+#include <iostream>
 
 using namespace std;
 
-int main (int argc, char* argv[])
+int main(int argc, char* argv[])
 {
     constexpr double Pi = 3.14159;
     double z = 1;
@@ -20,7 +19,7 @@ int main (int argc, char* argv[])
     cout << "Enter X: ";
     cin >> x;
 
-    if(x == 0)
+    if (x == 0)
     {
         cout << "Value of X must not be zero!";
         return 1;
@@ -28,13 +27,13 @@ int main (int argc, char* argv[])
 
     cout << "Enter Y: ";
     cin >> y;
-    
-    x *= Pi/180;
-    y *= Pi/180;
+
+    x *= Pi / 180;
+    y *= Pi / 180;
 
     ctgX = cos(x) / sin(x);
 
-    z = pow(1-tan(x), ctgX) + cos(x - y);
+    z = pow(1 - tan(x), ctgX) + cos(x - y);
 
     cout << "Value = " << z;
 

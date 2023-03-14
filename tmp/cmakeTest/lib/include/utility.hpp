@@ -1,3 +1,3 @@
 #include <string>
 
-bool callMethod_NameHasOwner(const std::string &name);
+bool callMethod_NameHasOwner(const std::string& name);

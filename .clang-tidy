@@ -1,0 +1,55 @@
+---
+Checks: >
+  cert-*,
+  clang-analyzer-*,
+  cppcoreguidelines-*,
+  -cppcoreguidelines-avoid-goto,
+  modernize-*,
+  -modernize-use-trailing-return-type,
+  -modernize-macro-to-enum,
+  portability-*,
+  readability-*,
+  -readability-identifier-length,
+  -readability-braces-around-statements,
+  -readability-uppercase-literal-suffix,
+  performance-*,
+  clang-diagnostic-*
+
+WarningsAsErrors: ''
+HeaderFilterRegex: ''
+AnalyzeTemporaryDtors: false
+# Note: let's keep the options sorted in alphabetical order.
+CheckOptions:
+  - key: cppcoreguidelines-special-member-functions.AllowSoleDefaultDtor
+    value: '1'
+  - key: readability-identifier-naming.ClassCase
+    value: 'CamelCase'
+  - key: readability-identifier-naming.EnumCase
+    value: 'CamelCase'
+  - key: readability-identifier-naming.EnumConstantCase
+    value: 'camelBack'
+  - key: readability-identifier-naming.FunctionCase
+    value: 'camelBack'
+  - key: readability-identifier-naming.MacroDefinitionCase
+    value: 'UPPER_CASE'
+  - key: readability-identifier-naming.MethodCase
+    value: 'camelBack'
+  - key: readability-identifier-naming.NamespaceCase
+    value: 'CamelCase'
+  - key: readability-identifier-naming.PrivateMemberPrefix
+    value: '_'
+  - key: readability-identifier-naming.StructCase
+    value: 'CamelCase'
+  - key: readability-identifier-naming.TemplateTemplateParameterCase
+    value: 'CamelCase'
+  - key: readability-identifier-naming.TypeTemplateParameterCase
+    value: 'CamelCase'
+  - key: readability-identifier-naming.UnionCase
+    value: 'CamelCase'
+  - key: readability-identifier-naming.ValueTemplateParameterCase
+    value: 'camelBack'
+  - key: readability-identifier-naming.ValueTemplateParameterPrefix
+    value: '_'
+  - key: readability-identifier-naming.VariableCase
+    value: 'camelBack'
+...

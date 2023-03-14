@@ -1,14 +1,14 @@
-//Compile with g++ (ver. 8.1.0)
-//Task : Сalculate vector length.
-//Input : double , double , double
-//Output : double
+// Compile with g++ (ver. 8.1.0)
+// Task : Сalculate vector length.
+// Input : double , double , double
+// Output : double
 
-#include <iostream>
 #include <cmath>
+#include <iostream>
 
 using namespace std;
 
-int main (int argc , char * argv[])
+int main(int argc, char* argv[])
 {
 
     double x;
@@ -25,7 +25,7 @@ int main (int argc , char * argv[])
     cout << "Enter Z: ";
     cin >> z;
 
-    length = sqrt(x*x + y*y + z*z);
+    length = sqrt(x * x + y * y + z * z);
 
     cout << "Length = " << length;
 

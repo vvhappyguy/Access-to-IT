@@ -1,5 +1,5 @@
 #include "check.hpp"
-#include <string> 
+#include <string>
 
 bool check()
 {

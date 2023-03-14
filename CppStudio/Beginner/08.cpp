@@ -1,17 +1,16 @@
-//compiled with clang (10.0.1)
-//8. Напишите программу, запрашивающую имя, фамилия, отчество и номер группы
-//студента и выводящую введённые данные в следующем виде:
-//Input: 3 strings
-//Output:   *******************************
-//          * Лабораторная работа № 1     *
-//          * Выполнил(а): ст. гр. ЗИ-123 *
-//          * Иванов Андрей Петрович      *
-//          *******************************
+// compiled with clang (10.0.1)
+// 8. Напишите программу, запрашивающую имя, фамилия, отчество и номер группы
+// студента и выводящую введённые данные в следующем виде:
+// Input: 3 strings
+// Output:   *******************************
+//           * Лабораторная работа № 1     *
+//           * Выполнил(а): ст. гр. ЗИ-123 *
+//           * Иванов Андрей Петрович      *
+//           *******************************
 
 #include <iostream>
 #include <string>
 using namespace std;
-
 
 int main()
 {
@@ -28,7 +27,7 @@ int main()
     cout << "Введите номер группы студента:";
     cin >> group;
     studentFullNameSize = name.length() + surname.length() + patronymic.length() + 6;
-    sizeOfSecondString= group.length() + 25;
+    sizeOfSecondString = group.length() + 25;
     if ((studentFullNameSize > 31) && (studentFullNameSize > sizeOfSecondString))
     {
         numberOfSymbols = studentFullNameSize;

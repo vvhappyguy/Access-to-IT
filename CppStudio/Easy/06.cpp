@@ -1,7 +1,7 @@
-//compiled with clang (10.0.1)
-//6. Выбор дня недели оператором switch
-//Input: int
-//Output: string
+// compiled with clang (10.0.1)
+// 6. Выбор дня недели оператором switch
+// Input: int
+// Output: string
 
 #include <iostream>
 using namespace std;
@@ -37,7 +37,7 @@ int main()
             break;
         default:
             cout << "Введите цифру в диапазоне от 1 до 7" << endl;
-            break;    
+            break;
     }
     return 0;
 }

@@ -33,5 +33,4 @@
 - [x] `20. Valid Parentheses` - [link](leetcode.com/problems/valid-parentheses/)
     ✅[C++ solution](./20/20.cpp) without tests - 2022/08/17
 
-
 TODO: Add the same descriptions for all tasks + sort by first time compelition.

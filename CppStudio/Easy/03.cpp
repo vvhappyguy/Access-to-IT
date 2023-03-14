@@ -15,7 +15,7 @@ int main()
 
     cin >> number;
 
-    if(number < 10 || number > 99)
+    if (number < 10 || number > 99)
     {
         cout << "Bad input value. Number must be in [10,99]." << endl;
         return 1;
@@ -24,11 +24,11 @@ int main()
     int first = number % 10;
     int second = number / 10;
 
-    if(first > second)
+    if (first > second)
     {
-        cout << first << " bigger than " << second;    
+        cout << first << " bigger than " << second;
     }
-    else if(second > first)
+    else if (second > first)
     {
         cout << second << " bigger than " << first;
     }
