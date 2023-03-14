@@ -563,12 +563,11 @@ bool step101(TreeNode *node1, TreeNode *node2) {
 
   if (node1->val != node2->val) return false;
 
-  return step101(node1->left, node2->right) && step101(node1->right, node2->left);
+  return step101(node1->left, node2->right) &&
+         step101(node1->right, node2->left);
 }
 
-bool isSymmetricRec(TreeNode *root) {
-  return step101(root->left, root->right);
-}
+bool isSymmetricRec(TreeNode *root) { return step101(root->left, root->right); }
 
 void start101() {
   TreeNode root;
@@ -596,6 +595,52 @@ void start101() {
 
   ba.val = 10;
   cout << isSymmetric(&root) << endl;
+}
+
+// lc 129
+void step129(TreeNode *root, int& sum, int cur)
+{
+  if(root == nullptr)
+  {
+    return;
+  }
+
+  cur += root->val;
+  if(root->left == nullptr && root->right == nullptr)
+  {
+    cout << sum << "+" << cur  << " = " << sum + cur << endl;
+    sum += cur;
+    return;
+  }
+  cur *= 10;
+  step129(root->left, sum, cur);
+  step129(root->right, sum, cur);
+  return;
+}
+int sumNumbers(TreeNode *root) {
+  int sum = 0;
+  step129(root, sum, 0);
+  return sum;
+}
+
+void start129()
+{
+  TreeNode root;
+  TreeNode a;
+  TreeNode b;
+  TreeNode aa;
+  TreeNode ab;
+  root.val = 1;
+  root.left = &a;
+  root.right = &b;
+  a.val = 2;
+  a.left = &aa;
+  a.right = &ab;
+  aa.val = 3;
+  ab.val = 4;
+  b.val = 5;
+
+  cout << sumNumbers(&root) << endl;
 }
 
 // TODO:
@@ -657,6 +702,7 @@ int main() {
   // start876();
   // start109();
   // start102();
-  start101();
+  // start101();
+  start129();
   return 0;
 }
