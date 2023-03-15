@@ -757,6 +757,54 @@ void start129()
     cout << sumNumbers(&root) << endl;
 }
 
+// lc 958
+bool isCompleteTree(TreeNode* root)
+{
+    queue<TreeNode*> q;
+    q.push(root);
+    while (q.front() != nullptr)
+    {
+        TreeNode* cur = q.front();
+        q.pop();
+
+        q.push(cur->left);
+        q.push(cur->right);
+    }
+    
+    while(!q.empty() && q.front() == nullptr)
+    {
+        q.pop();
+    }
+
+    return q.empty();
+}
+
+void start958()
+{
+    TreeNode root;
+    TreeNode a;
+    TreeNode b;
+    TreeNode aa;
+    TreeNode ab;
+    root.val = 1;
+    root.left = &a;
+    root.right = &b;
+    a.val = 2;
+    a.left = &aa;
+    a.right = &ab;
+    aa.val = 3;
+    ab.val = 4;
+    b.val = 5;
+
+    cout << isCompleteTree(&root) << endl;
+    a.left = nullptr;
+    cout << isCompleteTree(&root) << endl;
+    a.left = &aa;
+    a.right = nullptr;
+    b.left = &ab;
+    cout << isCompleteTree(&root) << endl;
+}
+
 // TODO:
 // https://leetcode.com/problems/insert-into-a-binary-search-tree/
 // https://leetcode.com/problems/serialize-and-deserialize-binary-tree/
@@ -822,6 +870,7 @@ int main()
     // start109();
     // start102();
     // start101();
-    start129();
+    // start129();
+    start958();
     return 0;
 }
