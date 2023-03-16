@@ -770,8 +770,8 @@ bool isCompleteTree(TreeNode* root)
         q.push(cur->left);
         q.push(cur->right);
     }
-    
-    while(!q.empty() && q.front() == nullptr)
+
+    while (!q.empty() && q.front() == nullptr)
     {
         q.pop();
     }
@@ -805,12 +805,77 @@ void start958()
     cout << isCompleteTree(&root) << endl;
 }
 
+// lc 108
+TreeNode* step108(vector<int>& nums, size_t startIndex, size_t endIndex)
+{
+    if (startIndex == endIndex)
+    {
+        return new TreeNode(nums[startIndex]);
+    }
+
+    size_t middleIndex = startIndex + (endIndex - startIndex) / 2;
+    cout << startIndex << ':' << endIndex << '=' << middleIndex << endl;
+    cin.get();
+    TreeNode* node = new TreeNode(nums[middleIndex]);
+
+    if (middleIndex != startIndex)
+        node->left = step701(nums, startIndex, middleIndex - 1);
+    if (middleIndex != endIndex)
+        node->right = step701(nums, middleIndex + 1, endIndex);
+
+    return node;
+}
+
+TreeNode* sortedArrayToBST(vector<int>& nums)
+{
+    return step701(nums, 0, nums.size() - 1);
+}
+
+void start108()
+{
+    std::vector<int> nodes1 = {0};
+    TreeNode* res = sortedArrayToBST(nodes1);
+    cout << res->val << endl;
+    printTree(res, "");
+    cout << "-----------" << endl;
+
+    std::vector<int> nodes2 = {0, 1};
+    res = sortedArrayToBST(nodes2);
+    cout << res->val << endl;
+    printTree(res, "");
+    cout << "-----------" << endl;
+
+    std::vector<int> nodes3 = {0, 1, 2};
+    res = sortedArrayToBST(nodes3);
+    cout << res->val << endl;
+    printTree(res, "");
+    cout << "-----------" << endl;
+
+    std::vector<int> nodes6 = {0, 1, 2, 3, 4, 5};
+    res = sortedArrayToBST(nodes6);
+    cout << res->val << endl;
+    printTree(res, "");
+    cout << "-----------" << endl;
+
+    std::vector<int> nodes10 = {-5, -4, -3, -2, -1, 0, 1, 2, 3, 4};
+    res = sortedArrayToBST(nodes10);
+    cout << res->val << endl;
+    printTree(res, "");
+    cout << "-----------" << endl;
+
+    std::vector<int> nodes9 = {-4, -3, -2, -1, 0, 1, 2, 3, 4};
+    res = sortedArrayToBST(nodes9);
+    cout << res->val << endl;
+    printTree(res, "");
+}
+
 // TODO:
 // https://leetcode.com/problems/insert-into-a-binary-search-tree/
 // https://leetcode.com/problems/serialize-and-deserialize-binary-tree/
 // https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/
 // https://leetcode.com/problems/flatten-nested-list-iterator/
 // https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/
+// https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/
 // https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/
 // https://leetcode.com/problems/binary-tree-maximum-path-sum/
 
@@ -871,6 +936,7 @@ int main()
     // start102();
     // start101();
     // start129();
-    start958();
+    // start958();
+    start701();
     return 0;
 }
