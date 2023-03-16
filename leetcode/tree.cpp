@@ -819,16 +819,16 @@ TreeNode* step108(vector<int>& nums, size_t startIndex, size_t endIndex)
     TreeNode* node = new TreeNode(nums[middleIndex]);
 
     if (middleIndex != startIndex)
-        node->left = step701(nums, startIndex, middleIndex - 1);
+        node->left = step108(nums, startIndex, middleIndex - 1);
     if (middleIndex != endIndex)
-        node->right = step701(nums, middleIndex + 1, endIndex);
+        node->right = step108(nums, middleIndex + 1, endIndex);
 
     return node;
 }
 
 TreeNode* sortedArrayToBST(vector<int>& nums)
 {
-    return step701(nums, 0, nums.size() - 1);
+    return step108(nums, 0, nums.size() - 1);
 }
 
 void start108()
@@ -867,6 +867,118 @@ void start108()
     res = sortedArrayToBST(nodes9);
     cout << res->val << endl;
     printTree(res, "");
+}
+
+// lc 106
+TreeNode* step106(vector<int>& inorder, size_t iB, size_t iE, vector<int>& postorder, size_t pB, size_t pE)
+{
+    if(iB >= iE || pB >= pE){
+        return nullptr;
+    }
+
+    int val = postorder[pE - 1];
+    TreeNode* node = new TreeNode(val);
+
+    auto it = std::find(begin(inorder) + iB, begin(inorder) + iE, val);
+    size_t diff = it - begin(inorder) - iB;
+    node->left = step106(inorder, iB, iB+diff, postorder, pB, pB + diff);
+    node->right = step106(inorder, iB+diff+1, iE, postorder, pB + diff, pE - 1);
+
+    return node;
+}
+
+TreeNode* buildTree(vector<int>& inorder, vector<int>& postorder)
+{
+    size_t size = postorder.size();
+    if(size == 0)
+    {
+        return nullptr;
+    }
+
+    return step106(inorder, 0, size, postorder, 0, size);
+}
+
+TreeNode* step106Improve(std::map<int, size_t>& indexes, vector<int>& inorder, size_t iB, size_t iE, vector<int>& postorder, size_t pB, size_t pE)
+{
+    if(iB >= iE || pB >= pE){
+        return nullptr;
+    }
+
+    int val = postorder[pE - 1];
+    TreeNode* node = new TreeNode(val);
+
+    auto it = indexes.at(val);
+    size_t diff = it - iB;
+    node->left = step106Improve(indexes,inorder, iB, iB+diff, postorder, pB, pB + diff);
+    node->right = step106Improve(indexes,inorder, iB+diff+1, iE, postorder, pB + diff, pE - 1);
+
+    return node;
+}
+
+TreeNode* buildTreeImprove(vector<int>& inorder, vector<int>& postorder)
+{
+    size_t size = postorder.size();
+    if(size == 0)
+    {
+        return nullptr;
+    }
+    std::map<int, size_t> indexes;
+    for(int i = 0; i < inorder.size();i++)
+    {
+        indexes.insert({inorder[i], i});
+    }
+
+    return step106Improve(indexes, inorder, 0, size, postorder, 0, size);
+}
+
+void start106()
+{
+    vector<int> io= {1};
+    vector<int> po= {1};
+    TreeNode* res = buildTree(io, po);
+    cout << res->val << endl;
+    printTree(res, "");
+    cout << "-----------" << endl;
+
+    io = {9,3,15,20,7};
+    po = {9,15,7,20,3};
+    res = buildTree(io, po);
+    cout << res->val << endl;
+    printTree(res, "");
+    cout << "-----------" << endl;
+
+    io = {2};
+    po = {2};
+    res = buildTree(io, po);
+    cout << res->val << endl;
+    printTree(res, "");
+    cout << "-----------" << endl;
+
+}
+
+void start106Improve()
+{
+    vector<int> io= {1};
+    vector<int> po= {1};
+    TreeNode* res = buildTreeImprove(io, po);
+    cout << res->val << endl;
+    printTree(res, "");
+    cout << "-----------" << endl;
+
+    io = {9,3,15,20,7};
+    po = {9,15,7,20,3};
+    res = buildTreeImprove(io, po);
+    cout << res->val << endl;
+    printTree(res, "");
+    cout << "-----------" << endl;
+
+    io = {2};
+    po = {2};
+    res = buildTreeImprove(io, po);
+    cout << res->val << endl;
+    printTree(res, "");
+    cout << "-----------" << endl;
+
 }
 
 // TODO:
@@ -937,6 +1049,8 @@ int main()
     // start101();
     // start129();
     // start958();
-    start701();
+    // start108();
+    start106();
+    start106Improve();
     return 0;
 }
