@@ -872,7 +872,8 @@ void start108()
 // lc 106
 TreeNode* step106(vector<int>& inorder, size_t iB, size_t iE, vector<int>& postorder, size_t pB, size_t pE)
 {
-    if(iB >= iE || pB >= pE){
+    if (iB >= iE || pB >= pE)
+    {
         return nullptr;
     }
 
@@ -881,8 +882,8 @@ TreeNode* step106(vector<int>& inorder, size_t iB, size_t iE, vector<int>& posto
 
     auto it = std::find(begin(inorder) + iB, begin(inorder) + iE, val);
     size_t diff = it - begin(inorder) - iB;
-    node->left = step106(inorder, iB, iB+diff, postorder, pB, pB + diff);
-    node->right = step106(inorder, iB+diff+1, iE, postorder, pB + diff, pE - 1);
+    node->left = step106(inorder, iB, iB + diff, postorder, pB, pB + diff);
+    node->right = step106(inorder, iB + diff + 1, iE, postorder, pB + diff, pE - 1);
 
     return node;
 }
@@ -890,7 +891,7 @@ TreeNode* step106(vector<int>& inorder, size_t iB, size_t iE, vector<int>& posto
 TreeNode* buildTree(vector<int>& inorder, vector<int>& postorder)
 {
     size_t size = postorder.size();
-    if(size == 0)
+    if (size == 0)
     {
         return nullptr;
     }
@@ -898,9 +899,16 @@ TreeNode* buildTree(vector<int>& inorder, vector<int>& postorder)
     return step106(inorder, 0, size, postorder, 0, size);
 }
 
-TreeNode* step106Improve(std::map<int, size_t>& indexes, vector<int>& inorder, size_t iB, size_t iE, vector<int>& postorder, size_t pB, size_t pE)
+TreeNode* step106Improve(std::map<int, size_t>& indexes,
+                         vector<int>& inorder,
+                         size_t iB,
+                         size_t iE,
+                         vector<int>& postorder,
+                         size_t pB,
+                         size_t pE)
 {
-    if(iB >= iE || pB >= pE){
+    if (iB >= iE || pB >= pE)
+    {
         return nullptr;
     }
 
@@ -909,8 +917,8 @@ TreeNode* step106Improve(std::map<int, size_t>& indexes, vector<int>& inorder, s
 
     auto it = indexes.at(val);
     size_t diff = it - iB;
-    node->left = step106Improve(indexes,inorder, iB, iB+diff, postorder, pB, pB + diff);
-    node->right = step106Improve(indexes,inorder, iB+diff+1, iE, postorder, pB + diff, pE - 1);
+    node->left = step106Improve(indexes, inorder, iB, iB + diff, postorder, pB, pB + diff);
+    node->right = step106Improve(indexes, inorder, iB + diff + 1, iE, postorder, pB + diff, pE - 1);
 
     return node;
 }
@@ -918,12 +926,12 @@ TreeNode* step106Improve(std::map<int, size_t>& indexes, vector<int>& inorder, s
 TreeNode* buildTreeImprove(vector<int>& inorder, vector<int>& postorder)
 {
     size_t size = postorder.size();
-    if(size == 0)
+    if (size == 0)
     {
         return nullptr;
     }
     std::map<int, size_t> indexes;
-    for(int i = 0; i < inorder.size();i++)
+    for (int i = 0; i < inorder.size(); i++)
     {
         indexes.insert({inorder[i], i});
     }
@@ -933,15 +941,15 @@ TreeNode* buildTreeImprove(vector<int>& inorder, vector<int>& postorder)
 
 void start106()
 {
-    vector<int> io= {1};
-    vector<int> po= {1};
+    vector<int> io = {1};
+    vector<int> po = {1};
     TreeNode* res = buildTree(io, po);
     cout << res->val << endl;
     printTree(res, "");
     cout << "-----------" << endl;
 
-    io = {9,3,15,20,7};
-    po = {9,15,7,20,3};
+    io = {9, 3, 15, 20, 7};
+    po = {9, 15, 7, 20, 3};
     res = buildTree(io, po);
     cout << res->val << endl;
     printTree(res, "");
@@ -953,20 +961,19 @@ void start106()
     cout << res->val << endl;
     printTree(res, "");
     cout << "-----------" << endl;
-
 }
 
 void start106Improve()
 {
-    vector<int> io= {1};
-    vector<int> po= {1};
+    vector<int> io = {1};
+    vector<int> po = {1};
     TreeNode* res = buildTreeImprove(io, po);
     cout << res->val << endl;
     printTree(res, "");
     cout << "-----------" << endl;
 
-    io = {9,3,15,20,7};
-    po = {9,15,7,20,3};
+    io = {9, 3, 15, 20, 7};
+    po = {9, 15, 7, 20, 3};
     res = buildTreeImprove(io, po);
     cout << res->val << endl;
     printTree(res, "");
@@ -978,7 +985,6 @@ void start106Improve()
     cout << res->val << endl;
     printTree(res, "");
     cout << "-----------" << endl;
-
 }
 
 // TODO:
