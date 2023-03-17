@@ -8,6 +8,15 @@
 
 ## Tasks
 
+- [x] `208. Implement Trie (Prefix Tree)` - [link](leetcode.com/problems/implement-trie-prefix-tree/)
+    ✅[C++ solution](./tree.cpp): (search lc 208) - 2023/03/17
+- [x] `106. Construct Binary Tree from Inorder and Postorder Traversal` - [link](leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/)
+    ✅[C++ solution](./tree.cpp): (search lc 106 - buildTree) - 2023/03/16
+    ✅[C++ solution](./tree.cpp): (search lc 106 - buildTreeImprove) - 2023/03/16 - with optimization using map
+- [x] `108. Convert Sorted Array to Binary Search Tree` - [link](leetcode.com/problems/convert-sorted-array-to-binary-search-tree/)
+    ✅[C++ solution](./tree.cpp): (search lc 108) - 2023/03/16
+- [x] `958. Check Completeness of a Binary Tree` - [link](leetcode.com/problems/check-completeness-of-a-binary-tree/)
+    ✅[C++ solution](./tree.cpp): (search lc 958) - 2023/03/15
 - [x] `129. Sum Root to Leaf Numbers` - [link](leetcode.com/problems/sum-root-to-leaf-numbers/)
     ✅[C++ solution](./tree.cpp): (search lc 129) - 2023/03/14
 - [x] `101. Symmetric Tree` - [link](leetcode.com/problems/symmetric-tree/)

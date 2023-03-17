@@ -1015,6 +1015,75 @@ void printTree(TreeNode* root, string prefix)
     printTree(root->left, prefix + "l");
 }
 
+// lc 208. Implement Trie (Prefix Tree)
+class Trie
+{
+    static constexpr size_t alphabetSize = 28;
+    struct TrieNode;
+    struct TrieNode
+    {
+        TrieNode* nodes[alphabetSize];
+        bool isEndOfWord;
+    };
+    TrieNode* root;
+
+    inline constexpr int toIndex(char letter)
+    {
+        return letter - 'a';
+    }
+
+public:
+    Trie()
+    {
+        root = new TrieNode();
+        root->isEndOfWord = true;
+    }
+
+    void insert(string word)
+    {
+        TrieNode* cur = root;
+        for (const auto& w : word)
+        {
+
+            cur->nodes[toIndex(w)] = new TrieNode();
+            cur->nodes[toIndex(w)]->isEndOfWord = false;
+            cur = cur->nodes[toIndex(w)];
+        }
+        cur->isEndOfWord = true;
+    }
+
+    bool search(string word)
+    {
+        TrieNode* cur = root;
+        for (const auto& w : word)
+        {
+            if (cur->nodes[toIndex(w)] == nullptr)
+            {
+                return false;
+            }
+            cur = cur->nodes[toIndex(w)];
+        }
+        return cur->isEndOfWord;
+    }
+
+    bool startsWith(string prefix)
+    {
+        TrieNode* cur = root;
+        for (const auto& w : prefix)
+        {
+            if (cur->nodes[toIndex(w)] == nullptr)
+            {
+                return false;
+            }
+            cur = cur->nodes[toIndex(w)];
+        }
+        return true;
+    }
+};
+
+
+
+
 int main()
 {
     TreeNode root;
