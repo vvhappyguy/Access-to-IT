@@ -8,6 +8,10 @@
 
 ## Tasks
 
+### Progress
+
+- [x] `701. Insert into a Binary Search Tree` - [link](leetcode.com/problems/insert-into-a-binary-search-tree/)
+    ✅[C++ solution](./tree.cpp): (search lc 701) - 2023/03/18
 - [x] `208. Implement Trie (Prefix Tree)` - [link](leetcode.com/problems/implement-trie-prefix-tree/)
     ✅[C++ solution](./tree.cpp): (search lc 208) - 2023/03/17
 - [x] `106. Construct Binary Tree from Inorder and Postorder Traversal` - [link](leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/)
@@ -41,5 +45,13 @@
     ✅[C++ solution](./14/14.cpp) - 2023/02/26
 - [x] `20. Valid Parentheses` - [link](leetcode.com/problems/valid-parentheses/)
     ✅[C++ solution](./20/20.cpp) without tests - 2022/08/17
+
+### Fundamental
+
+- `208. Implement Trie (Prefix Tree)` - [link](leetcode.com/problems/implement-trie-prefix-tree/)
+
+### Interesting
+
+- https://leetcode.com/problems/design-browser-history/
 
 TODO: Add the same descriptions for all tasks + sort by first time compelition.

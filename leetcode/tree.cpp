@@ -987,6 +987,57 @@ void start106Improve()
     cout << "-----------" << endl;
 }
 
+// lc 701
+TreeNode* insertIntoBST(TreeNode* root, int val)
+{
+    if (root == nullptr)
+    {
+        return new TreeNode(val);
+    }
+    if (root->val > val)
+    {
+        root->left = insertIntoBST(root->left, val);
+    }
+    else
+    {
+        root->right = insertIntoBST(root->right, val);
+    }
+    return root;
+}
+
+void start701()
+{
+    TreeNode root;
+    TreeNode a;
+    TreeNode b;
+    TreeNode aa;
+    TreeNode ab;
+    root.val = 4;
+    root.left = &a;
+    root.right = &b;
+    a.val = 1;
+    a.left = &aa;
+    a.right = &ab;
+    aa.val = 0;
+    ab.val = 2;
+    b.val = 5;
+
+    TreeNode* res = insertIntoBST(&root, -1);
+    cout << res->val << endl;
+    printTree(res, "");
+    cout << "-----------" << endl;
+
+    res = insertIntoBST(&root, 10);
+    cout << res->val << endl;
+    printTree(res, "");
+    cout << "-----------" << endl;
+
+    res = insertIntoBST(&root, 3);
+    cout << res->val << endl;
+    printTree(res, "");
+    cout << "-----------" << endl;
+}
+
 // TODO:
 // https://leetcode.com/problems/insert-into-a-binary-search-tree/
 // https://leetcode.com/problems/serialize-and-deserialize-binary-tree/
@@ -1081,9 +1132,6 @@ public:
     }
 };
 
-
-
-
 int main()
 {
     TreeNode root;
@@ -1125,7 +1173,8 @@ int main()
     // start129();
     // start958();
     // start108();
-    start106();
-    start106Improve();
+    // start106();
+    // start106Improve();
+    start701();
     return 0;
 }
