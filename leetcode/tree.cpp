@@ -5,6 +5,7 @@
 #include <map>
 #include <queue>
 #include <stack>
+#include <unordered_set>
 #include <utility>
 #include <vector>
 
@@ -987,6 +988,73 @@ void start106Improve()
     cout << "-----------" << endl;
 }
 
+// lc 105. Construct Binary Tree from Preorder and Inorder Traversal
+TreeNode* step105(std::map<int, int>& indexes,
+                  vector<int>& inorder,
+                  size_t iB,
+                  size_t iE,
+                  vector<int>& preorder,
+                  size_t pB,
+                  size_t pE)
+{
+    if (iB > iE || pB > pE)
+    {
+        return nullptr;
+    }
+
+    int val = preorder[pB];
+    TreeNode* node = new TreeNode(val);
+
+    auto it = indexes.at(val);
+    size_t diff = it - iB;
+    cout << "diff=" << diff << endl << "i=" << iB << ":" << iE << endl << "p=" << pB << ":" << pE << endl;
+    cin.get();
+    node->left = step105(indexes, inorder, iB, it -1, preorder, pB + 1, pB + diff);
+    node->right = step105(indexes, inorder, it + 1, iE, preorder, pB + diff + 1, pE);
+
+    return node;
+}
+
+TreeNode* buildTreePrIn(vector<int>& preorder, vector<int>& inorder)
+{
+    size_t size = preorder.size();
+    if (size == 0)
+    {
+        return nullptr;
+    }
+    std::map<int, int> indexes;
+    for (int i = 0; i < preorder.size(); i++)
+    {
+        indexes.insert({inorder[i], i});
+    }
+
+    return step105(indexes, inorder, 0, size - 1, preorder, 0, size - 1);
+}
+
+void start105()
+{
+    vector<int> io = {1};
+    vector<int> po = {1};
+    TreeNode* res = buildTreePrIn(io, po);
+    cout << res->val << endl;
+    printTree(res, "");
+    cout << "-----------" << endl;
+
+    io = {9, 3, 15, 20, 7};
+    po = {3, 9, 20, 15, 7};
+    res = buildTreePrIn(io, po);
+    cout << res->val << endl;
+    printTree(res, "");
+    cout << "-----------" << endl;
+
+    io = {2};
+    po = {2};
+    res = buildTreePrIn(io, po);
+    cout << res->val << endl;
+    printTree(res, "");
+    cout << "-----------" << endl;
+}
+
 // lc 701
 TreeNode* insertIntoBST(TreeNode* root, int val)
 {
@@ -1039,12 +1107,9 @@ void start701()
 }
 
 // TODO:
-// https://leetcode.com/problems/insert-into-a-binary-search-tree/
 // https://leetcode.com/problems/serialize-and-deserialize-binary-tree/
-// https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/
 // https://leetcode.com/problems/flatten-nested-list-iterator/
 // https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/
-// https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/
 // https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/
 // https://leetcode.com/problems/binary-tree-maximum-path-sum/
 
@@ -1175,6 +1240,7 @@ int main()
     // start108();
     // start106();
     // start106Improve();
-    start701();
+    // start701();
+    start105();
     return 0;
 }

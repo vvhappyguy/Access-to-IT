@@ -10,6 +10,8 @@
 
 ### Progress
 
+- [x] `105. Construct Binary Tree from Preorder and Inorder Traversal` - [link](leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)
+    ✅[C++ solution](./tree.cpp): (search lc 105) - 2023/03/19
 - [x] `701. Insert into a Binary Search Tree` - [link](leetcode.com/problems/insert-into-a-binary-search-tree/)
     ✅[C++ solution](./tree.cpp): (search lc 701) - 2023/03/18
 - [x] `208. Implement Trie (Prefix Tree)` - [link](leetcode.com/problems/implement-trie-prefix-tree/)
@@ -53,5 +55,6 @@
 ### Interesting
 
 - https://leetcode.com/problems/design-browser-history/
+- https://leetcode.com/problems/design-add-and-search-words-data-structure/
 
 TODO: Add the same descriptions for all tasks + sort by first time compelition.
