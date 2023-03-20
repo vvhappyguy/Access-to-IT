@@ -10,6 +10,8 @@
 
 ### Progress
 
+- [x] `605. Can Place Flowers` - [link](leetcode.com/problems/can-place-flowers/)
+    ✅[C++ solution](./605/605.cpp): - 2023/03/20
 - [x] `105. Construct Binary Tree from Preorder and Inorder Traversal` - [link](leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)
     ✅[C++ solution](./tree.cpp): (search lc 105) - 2023/03/19
 - [x] `701. Insert into a Binary Search Tree` - [link](leetcode.com/problems/insert-into-a-binary-search-tree/)
