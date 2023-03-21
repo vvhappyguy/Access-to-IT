@@ -10,6 +10,8 @@
 
 ### Progress
 
+- [x] `2348. Number of Zero-Filled Subarrays` - [link](leetcode.com/problems/number-of-zero-filled-subarrays/)
+    ✅[C++ solution](./2348/2348.cpp): - 2023/03/21 - two solutions :-) 
 - [x] `605. Can Place Flowers` - [link](leetcode.com/problems/can-place-flowers/)
     ✅[C++ solution](./605/605.cpp): - 2023/03/20
 - [x] `105. Construct Binary Tree from Preorder and Inorder Traversal` - [link](leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)
