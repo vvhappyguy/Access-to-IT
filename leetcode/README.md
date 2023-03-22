@@ -10,6 +10,8 @@
 
 ### Progress
 
+- [x] `58. Length of Last Word` - [link](leetcode.com/problems/length-of-last-word/)
+    ✅[C++ solution](./58/58.cpp): - 2023/03/22
 - [x] `2348. Number of Zero-Filled Subarrays` - [link](leetcode.com/problems/number-of-zero-filled-subarrays/)
     ✅[C++ solution](./2348/2348.cpp): - 2023/03/21 - two solutions :-) 
 - [x] `605. Can Place Flowers` - [link](leetcode.com/problems/can-place-flowers/)
