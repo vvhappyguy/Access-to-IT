@@ -4,7 +4,9 @@
 #include <list>
 #include <map>
 #include <queue>
+#include <sstream>
 #include <stack>
+#include <string>
 #include <unordered_set>
 #include <utility>
 #include <vector>
@@ -1009,7 +1011,7 @@ TreeNode* step105(std::map<int, int>& indexes,
     size_t diff = it - iB;
     cout << "diff=" << diff << endl << "i=" << iB << ":" << iE << endl << "p=" << pB << ":" << pE << endl;
     cin.get();
-    node->left = step105(indexes, inorder, iB, it -1, preorder, pB + 1, pB + diff);
+    node->left = step105(indexes, inorder, iB, it - 1, preorder, pB + 1, pB + diff);
     node->right = step105(indexes, inorder, it + 1, iE, preorder, pB + diff + 1, pE);
 
     return node;
@@ -1109,7 +1111,6 @@ void start701()
 // TODO:
 // https://leetcode.com/problems/serialize-and-deserialize-binary-tree/
 // https://leetcode.com/problems/flatten-nested-list-iterator/
-// https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/
 // https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/
 // https://leetcode.com/problems/binary-tree-maximum-path-sum/
 
@@ -1197,6 +1198,153 @@ public:
     }
 };
 
+// lc 297
+class Codec
+{
+public:
+    // Encodes a tree to a single string.
+    string serialize(TreeNode* root)
+    {
+        if (root == nullptr)
+        {
+            return "";
+        }
+        string res("");
+
+        queue<TreeNode*> q;
+        q.push(root);
+        while (!q.empty())
+        {
+            TreeNode* curr = q.front();
+            q.pop();
+            if (curr == NULL)
+            {
+                res.append("N,");
+            }
+            else
+            {
+                res.append(to_string(curr->val) + ',');
+            }
+            if (curr != NULL)
+            {
+                q.push(curr->left);
+                q.push(curr->right);
+            }
+        }
+        res.pop_back();
+        return res;
+    }
+
+    // Decodes your encoded data to tree.
+    TreeNode* deserialize(string data)
+    {
+        // cout << "data=" << data << endl;
+        if (data.size() == 0)
+        {
+            return nullptr;
+        }
+        stringstream ss(data);
+        string str;
+        getline(ss, str, ',');
+        queue<TreeNode*> q;
+        TreeNode* root = new TreeNode(stoi(str));
+        q.push(root);
+        // cout << ss.eof() << endl;
+        while (!q.empty() && !ss.eof())
+        {
+            TreeNode* curr = q.front();
+            q.pop();
+
+            getline(ss, str, ',');
+            // cout << str << endl;
+            // cin.get();
+            if (str == "N")
+            {
+                curr->left = nullptr;
+            }
+            else
+            {
+                TreeNode* leftNode = new TreeNode(stoi(str));
+                curr->left = leftNode;
+                q.push(leftNode);
+            }
+
+            getline(ss, str, ',');
+            // cout << str << endl;
+            // cin.get();
+            if (str == "N")
+            {
+                curr->right = nullptr;
+            }
+            else
+            {
+                TreeNode* rightNode = new TreeNode(stoi(str));
+                curr->right = rightNode;
+                q.push(rightNode);
+            }
+        }
+        return root;
+    }
+};
+
+void start297()
+{
+    Codec codec;
+    string res;
+    TreeNode* resTree;
+
+    res = codec.serialize(nullptr);
+    cout << res << endl;
+    resTree = codec.deserialize(res);
+    printTree(resTree, "");
+
+    TreeNode root(10);
+    res = codec.serialize(&root);
+    cout << res << endl;
+    resTree = codec.deserialize(res);
+    printTree(resTree, "");
+
+    TreeNode a(1);
+    root.left = &a;
+    res = codec.serialize(&root);
+    cout << res << endl;
+    resTree = codec.deserialize(res);
+    printTree(resTree, "");
+
+    TreeNode b(2);
+    root.right = &b;
+    res = codec.serialize(&root);
+    cout << res << endl;
+    resTree = codec.deserialize(res);
+    printTree(resTree, "");
+
+    root.left = nullptr;
+    res = codec.serialize(&root);
+    cout << res << endl;
+    resTree = codec.deserialize(res);
+    printTree(resTree, "");
+
+    root.left = &a;
+    TreeNode aa(8);
+    TreeNode ab(9);
+    a.left = &aa;
+    a.right = &ab;
+    res = codec.serialize(&root);
+    cout << res << endl;
+    resTree = codec.deserialize(res);
+    printTree(resTree, "");
+
+    // root.val = 4;
+    // root.left = &a;
+    // root.right = &b;
+    // a.val = 1;
+    // a.left = &aa;
+    // a.right = &ab;
+    // aa.val = 0;
+    // ab.val = 2;
+    // b.val = 5;
+}
+
 int main()
 {
     TreeNode root;
@@ -1241,6 +1389,7 @@ int main()
     // start106();
     // start106Improve();
     // start701();
-    start105();
+    // start105();
+    start297();
     return 0;
 }
