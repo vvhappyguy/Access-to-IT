@@ -20,6 +20,8 @@
 
 ### Progress
 
+- [x]  `1791. Find Center of Star Graph` 🟩 - [link](https://leetcode.com/problems/find-center-of-star-graph/)
+    ✅[C++ solution](./graph.cpp): (search Solution1791) - 2023/03/24 - two solutions.
 - [x]  `297. Serialize and Deserialize Binary Tree` 🟥 - [link](http://leetcode.com/problems/serialize-and-deserialize-binary-tree/)
     ✅[C++ solution](./tree.cpp): (search lc 297) - 2023/03/23 - using BFS and leetcode style serialization.
     🔜[C++ solution](./tree.cpp): use DFS (simpler, but worse by time).
