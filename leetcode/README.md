@@ -20,6 +20,8 @@
 
 ### Progress
 
+- [x]  `83. Remove Duplicates from Sorted List` 🟩 - [link](https://leetcode.com/problems/remove-duplicates-from-sorted-list/)
+    ✅[C++ solution](./83/83.cpp): - 2023/03/25.
 - [x]  `1791. Find Center of Star Graph` 🟩 - [link](https://leetcode.com/problems/find-center-of-star-graph/)
     ✅[C++ solution](./graph.cpp): (search Solution1791) - 2023/03/24 - two solutions.
 - [x]  `297. Serialize and Deserialize Binary Tree` 🟥 - [link](http://leetcode.com/problems/serialize-and-deserialize-binary-tree/)

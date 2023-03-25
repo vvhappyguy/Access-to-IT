@@ -1109,7 +1109,6 @@ void start701()
 }
 
 // TODO:
-// https://leetcode.com/problems/serialize-and-deserialize-binary-tree/
 // https://leetcode.com/problems/flatten-nested-list-iterator/
 // https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/
 // https://leetcode.com/problems/binary-tree-maximum-path-sum/
