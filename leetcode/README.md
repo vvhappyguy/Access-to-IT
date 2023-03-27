@@ -20,6 +20,8 @@
 
 ### Progress
 
+- [x]  `111. Minimum Depth of Binary Tree` 🟩 - [link](https://leetcode.com/problems/minimum-depth-of-binary-tree/)
+    ✅[C++ solution](./tree.cpp): (search lc 111) - 2023/03/27.
 - [x]  `83. Remove Duplicates from Sorted List` 🟩 - [link](https://leetcode.com/problems/remove-duplicates-from-sorted-list/)
     ✅[C++ solution](./83/83.cpp): - 2023/03/25.
 - [x]  `1791. Find Center of Star Graph` 🟩 - [link](https://leetcode.com/problems/find-center-of-star-graph/)

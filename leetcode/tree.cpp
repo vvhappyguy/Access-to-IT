@@ -1057,6 +1057,54 @@ void start105()
     cout << "-----------" << endl;
 }
 
+// lc 111
+void step111(TreeNode* root, int& min, int a)
+{
+    if(root == nullptr)
+    {
+        return;
+    }
+    if (a > min)
+        return;
+    if (root->left == nullptr && root->right == nullptr)
+    {
+        min = a;
+        return;
+    }
+    step111(root->left, min, a + 1);
+    step111(root->right, min, a + 1);
+    return;
+}
+
+int minDepth(TreeNode* root)
+{
+    if(root == nullptr)
+        return 0;
+    int min = 100001;
+    step111(root, min, 1);
+    return min;
+}
+
+void start111()
+{
+    TreeNode root;
+    TreeNode a;
+    TreeNode b;
+    TreeNode aa;
+    TreeNode ab;
+    root.val = 4;
+    root.left = &a;
+    root.right = &b;
+    a.val = 1;
+    a.left = &aa;
+    a.right = &ab;
+    aa.val = 0;
+    ab.val = 2;
+    b.val = 5;
+
+    cout << minDepth(&root) << endl;
+}
+
 // lc 701
 TreeNode* insertIntoBST(TreeNode* root, int val)
 {
@@ -1389,6 +1437,7 @@ int main()
     // start106Improve();
     // start701();
     // start105();
-    start297();
+    // start297();
+    start111();
     return 0;
 }
