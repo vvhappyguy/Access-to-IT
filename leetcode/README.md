@@ -20,8 +20,10 @@
 
 ### Progress
 
+- [x]  `67. Add Binary` 🟩 - [link](https://leetcode.com/problems/add-binary/)
+    ✅[C++ solution](./67/67.cpp): - 2023/03/28 without tests.
 - [x]  `88. Merge Sorted Array` 🟩 - [link](https://leetcode.com/problems/merge-sorted-array/)
-    ✅[C++ solution](./88.88.cpp): - 2023/03/28.
+    ✅[C++ solution](./88/88.cpp): - 2023/03/28.
 - [x]  `111. Minimum Depth of Binary Tree` 🟩 - [link](https://leetcode.com/problems/minimum-depth-of-binary-tree/)
     ✅[C++ solution](./tree.cpp): (search lc 111) - 2023/03/27.
 - [x]  `83. Remove Duplicates from Sorted List` 🟩 - [link](https://leetcode.com/problems/remove-duplicates-from-sorted-list/)
