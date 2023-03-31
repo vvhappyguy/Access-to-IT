@@ -20,8 +20,11 @@
 
 ### Progress
 
+- [x]  `28. Find the Index of the First Occurrence in a String` 🟩 - [link](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/)
+    ✅[C++ solution](./28/28.cpp): - 2023/03/31.
+    🔜[C++ solution](./28/28.cpp): - 2023/03/31 - Implement [KMP algorithm](https://www.geeksforgeeks.org/kmp-algorithm-for-pattern-searching/).
 - [x]  `67. Add Binary` 🟩 - [link](https://leetcode.com/problems/add-binary/)
-    ✅[C++ solution](./67/67.cpp): - 2023/03/28 without tests.
+    ✅[C++ solution](./67/67.cpp): - 2023/03/30 without tests.
 - [x]  `88. Merge Sorted Array` 🟩 - [link](https://leetcode.com/problems/merge-sorted-array/)
     ✅[C++ solution](./88/88.cpp): - 2023/03/28.
 - [x]  `111. Minimum Depth of Binary Tree` 🟩 - [link](https://leetcode.com/problems/minimum-depth-of-binary-tree/)
