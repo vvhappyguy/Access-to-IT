@@ -20,6 +20,8 @@
 
 ### Progress
 
+- [x]  `704. Binary Search` 🟩 - [link](https://leetcode.com/problems/binary-search/)
+    ✅[C++ solution](./704/704.cpp): - 2023/04/01.
 - [x]  `28. Find the Index of the First Occurrence in a String` 🟩 - [link](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/)
     ✅[C++ solution](./28/28.cpp): - 2023/03/31.
     🔜[C++ solution](./28/28.cpp): - 2023/03/31 - Implement [KMP algorithm](https://www.geeksforgeeks.org/kmp-algorithm-for-pattern-searching/).
