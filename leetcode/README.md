@@ -20,9 +20,11 @@
 
 ### Progress
 
+- [x]  `881. Boats to Save People` 🟨 - [link](https://leetcode.com/problems/boats-to-save-people/)
+    ✅[C++ solution](./881/881.cpp): - 2023/04/03 - some extrachecks in loop.
 - [x]  `2300. Successful Pairs of Spells and Potions` 🟨 - [link](https://leetcode.com/problems/successful-pairs-of-spells-and-potions/)
     ✅[C++ solution](./2300/2300.cpp): - 2023/04/02 - bad by time and memory.
-    🔜[C++ solution](./2300/2300.cpp): - think about better solution. 
+    🔜[C++ solution](./2300/2300.cpp): - think about better solution.
 - [x]  `704. Binary Search` 🟩 - [link](https://leetcode.com/problems/binary-search/)
     ✅[C++ solution](./704/704.cpp): - 2023/04/01.
 - [x]  `28. Find the Index of the First Occurrence in a String` 🟩 - [link](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/)
