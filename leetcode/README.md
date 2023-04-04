@@ -20,8 +20,10 @@
 
 ### Progress
 
+- [x]  `2405. Optimal Partition of String` 🟨 - [link](https://leetcode.com/problems/optimal-partition-of-string/)
+    ✅[C++ solution](./2405/2405.cpp): - 2023/04/04 - (extra: genius solution from lc).
 - [x]  `881. Boats to Save People` 🟨 - [link](https://leetcode.com/problems/boats-to-save-people/)
-    ✅[C++ solution](./881/881.cpp): - 2023/04/03 - some extrachecks in loop.
+    ✅[C++ solution](./881/881.cpp): - 2023/04/03 - some extra checks in loop.
 - [x]  `2300. Successful Pairs of Spells and Potions` 🟨 - [link](https://leetcode.com/problems/successful-pairs-of-spells-and-potions/)
     ✅[C++ solution](./2300/2300.cpp): - 2023/04/02 - bad by time and memory.
     🔜[C++ solution](./2300/2300.cpp): - think about better solution.
