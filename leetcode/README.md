@@ -20,6 +20,8 @@
 
 ### Progress
 
+- [x]  `1254. Number of Closed Islands` 🟨 - [link](https://leetcode.com/problems/number-of-closed-islands/)
+    ✅[C++ solution](./1254/1254.cpp): - 2023/04/05
 - [x]  `2439. Minimize Maximum of Array` 🟨 - [link](https://leetcode.com/problems/minimize-maximum-of-array/)
     ✅[C++ solution](./2439/2439.cpp): - 2023/04/05 - (solved only after explanation from [youtube](https://www.youtube.com/watch?v=DAQHXe1yNtM&ab_channel=AryanMittal)).
 - [x]  `2405. Optimal Partition of String` 🟨 - [link](https://leetcode.com/problems/optimal-partition-of-string/)
