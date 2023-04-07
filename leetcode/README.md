@@ -20,8 +20,10 @@
 
 ### Progress
 
+- [x]  `1020. Number of Enclaves` 🟨 - [link](https://leetcode.com/problems/number-of-enclaves/)
+    ✅[C++ solution](./1020/1020.cpp): - 2023/04/07
 - [x]  `1254. Number of Closed Islands` 🟨 - [link](https://leetcode.com/problems/number-of-closed-islands/)
-    ✅[C++ solution](./1254/1254.cpp): - 2023/04/05
+    ✅[C++ solution](./1254/1254.cpp): - 2023/04/06
 - [x]  `2439. Minimize Maximum of Array` 🟨 - [link](https://leetcode.com/problems/minimize-maximum-of-array/)
     ✅[C++ solution](./2439/2439.cpp): - 2023/04/05 - (solved only after explanation from [youtube](https://www.youtube.com/watch?v=DAQHXe1yNtM&ab_channel=AryanMittal)).
 - [x]  `2405. Optimal Partition of String` 🟨 - [link](https://leetcode.com/problems/optimal-partition-of-string/)
