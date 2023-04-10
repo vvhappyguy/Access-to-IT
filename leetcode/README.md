@@ -20,6 +20,9 @@
 
 ### Progress
 
+- [x] `20. Valid Parentheses` 🟩 - [link](http://leetcode.com/problems/valid-parentheses/)
+    ✅[C++ solution](./20.ValidParentheses/20.cpp) (search "isValidOld") - 2022/08/17
+    ✅[C++ solution](./20.ValidParentheses/20.cpp) (search "isValid") - 2023/04/10
 - [x]  `7. Reverse Integer` 🟨 - [link](https://leetcode.com/problems/reverse-integer/)
     ✅[C++ solution](./7.ReverseInteger/7.cpp): - 2023/04/09 C++ solution with queue.
     ✅[C++ solution](./7.ReverseInteger/7.cpp): - 2023/04/09 C++ only math.
@@ -97,8 +100,6 @@
     ✅[C++ solution](./9/9.cpp) - 2022/12/17
 - [x] `14. Longest Common Prefix` - [link](https://leetcode.com/problems/longest-common-prefix/)
     ✅[C++ solution](./14/14.cpp) - 2023/02/26
-- [x] `20. Valid Parentheses` 🟩 - [link](http://leetcode.com/problems/valid-parentheses/)
-    ✅[C++ solution](./20/20.cpp) without tests - 2022/08/17
 
 ### Too hard for me :-)
 
