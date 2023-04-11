@@ -20,6 +20,8 @@
 
 ### Progress
 
+- [x] `2390. Removing Stars From a String` 🟨 - [link](https://leetcode.com/problems/removing-stars-from-a-string/)
+    ✅[C++ solution](./2390.RemovingStarsFromaString/2390.cpp) - 2023/04/11
 - [x] `20. Valid Parentheses` 🟩 - [link](http://leetcode.com/problems/valid-parentheses/)
     ✅[C++ solution](./20.ValidParentheses/20.cpp) (search "isValidOld") - 2022/08/17
     ✅[C++ solution](./20.ValidParentheses/20.cpp) (search "isValid") - 2023/04/10
