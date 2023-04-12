@@ -20,6 +20,8 @@
 
 ### Progress
 
+- [x] `71. Simplify Path` 🟨 - [link](https://leetcode.com/problems/simplify-path/)
+    ✅[C++ solution](./71.SimplifyPath/71.cpp) - 2023/04/12
 - [x] `2390. Removing Stars From a String` 🟨 - [link](https://leetcode.com/problems/removing-stars-from-a-string/)
     ✅[C++ solution](./2390.RemovingStarsFromaString/2390.cpp) - 2023/04/11
 - [x] `20. Valid Parentheses` 🟩 - [link](http://leetcode.com/problems/valid-parentheses/)
