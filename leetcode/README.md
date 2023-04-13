@@ -20,6 +20,8 @@
 
 ### Progress
 
+- [x] `946. Validate Stack Sequences` 🟨 - [link](https://leetcode.com/problems/validate-stack-sequences/)
+    ✅[C++ solution](./946.ValidateStackSequences/946.cpp) - 2023/04/13
 - [x] `71. Simplify Path` 🟨 - [link](https://leetcode.com/problems/simplify-path/)
     ✅[C++ solution](./71.SimplifyPath/71.cpp) - 2023/04/12
 - [x] `2390. Removing Stars From a String` 🟨 - [link](https://leetcode.com/problems/removing-stars-from-a-string/)
