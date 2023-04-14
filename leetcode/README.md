@@ -20,6 +20,9 @@
 
 ### Progress
 
+- [x] `516. Longest Palindromic Subsequence` 🟨 - [link](https://leetcode.com/problems/longest-palindromic-subsequence/)
+    ✅[C++ solution](./516.LongestPalindromicSubsequence/516.cpp) - 2023/04/14 It was really hard! Task not "Medium".
+    🔜 See better solutions and investigate them.
 - [x] `946. Validate Stack Sequences` 🟨 - [link](https://leetcode.com/problems/validate-stack-sequences/)
     ✅[C++ solution](./946.ValidateStackSequences/946.cpp) - 2023/04/13
 - [x] `71. Simplify Path` 🟨 - [link](https://leetcode.com/problems/simplify-path/)

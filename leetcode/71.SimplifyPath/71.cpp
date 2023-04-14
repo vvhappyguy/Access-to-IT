@@ -36,9 +36,8 @@ public:
         int backs = 0;
         for (int i = v.size() - 1; i >= 0; --i)
         {
-            if(v[i] == "/.")
+            if (v[i] == "/.")
             {
-
             }
             else if (v[i] == "/")
             {
@@ -49,8 +48,8 @@ public:
             }
             else
             {
-                //tmp += v[i];
-                if(backs > 0)
+                // tmp += v[i];
+                if (backs > 0)
                 {
                     backs--;
                 }
@@ -58,7 +57,6 @@ public:
                 {
                     mod.push_back(v[i]);
                 }
-                
             }
         }
         cout << endl;
@@ -68,7 +66,7 @@ public:
         {
             tmp += mod[i];
         }
-        if(tmp == "")
+        if (tmp == "")
         {
             tmp = "/";
         }
