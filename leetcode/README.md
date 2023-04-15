@@ -20,6 +20,8 @@
 
 ### Progress
 
+- [x] `70. Climbing Stairs` 🟩 - [link](https://leetcode.com/problems/climbing-stairs/)
+    ✅[C++ solution](./70.ClimbingStairs/70.cpp)  - 2023/04/15
 - [x] `516. Longest Palindromic Subsequence` 🟨 - [link](https://leetcode.com/problems/longest-palindromic-subsequence/)
     ✅[C++ solution](./516.LongestPalindromicSubsequence/516.cpp) - 2023/04/14 It was really hard! Task not "Medium".
     🔜 See better solutions and investigate them.
