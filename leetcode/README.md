@@ -20,6 +20,8 @@
 
 ### Progress
 
+- [x] `125. Valid Palindrome` 🟩 - [link](https://leetcode.com/problems/valid-palindrome/)
+    ✅[C++ solution](./125.ValidPalindrome/125.cpp)  - 2023/04/16
 - [x] `70. Climbing Stairs` 🟩 - [link](https://leetcode.com/problems/climbing-stairs/)
     ✅[C++ solution](./70.ClimbingStairs/70.cpp)  - 2023/04/15
 - [x] `516. Longest Palindromic Subsequence` 🟨 - [link](https://leetcode.com/problems/longest-palindromic-subsequence/)
