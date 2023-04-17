@@ -20,6 +20,8 @@
 
 ### Progress
 
+- [x] `1431. Kids With the Greatest Number of Candies` 🟩 - [link](https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/)
+    ✅[C++ solution](./1431.KidsWiththeGreatestNumberofCandies/1431.cpp)  - 2023/04/17
 - [x] `125. Valid Palindrome` 🟩 - [link](https://leetcode.com/problems/valid-palindrome/)
     ✅[C++ solution](./125.ValidPalindrome/125.cpp)  - 2023/04/16
 - [x] `70. Climbing Stairs` 🟩 - [link](https://leetcode.com/problems/climbing-stairs/)
