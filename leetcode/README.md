@@ -20,6 +20,8 @@
 
 ### Progress
 
+- [x] `1768. Merge Strings Alternately` 🟩 - [link](https://leetcode.com/problems/merge-strings-alternately/)
+    ✅[C++ solution](./1768.MergeStringsAlternately/1768.cpp)  - 2023/04/18
 - [x] `1431. Kids With the Greatest Number of Candies` 🟩 - [link](https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/)
     ✅[C++ solution](./1431.KidsWiththeGreatestNumberofCandies/1431.cpp)  - 2023/04/17
 - [x] `125. Valid Palindrome` 🟩 - [link](https://leetcode.com/problems/valid-palindrome/)
