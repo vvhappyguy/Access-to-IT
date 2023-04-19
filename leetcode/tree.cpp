@@ -1060,7 +1060,7 @@ void start105()
 // lc 111
 void step111(TreeNode* root, int& min, int a)
 {
-    if(root == nullptr)
+    if (root == nullptr)
     {
         return;
     }
@@ -1078,7 +1078,7 @@ void step111(TreeNode* root, int& min, int a)
 
 int minDepth(TreeNode* root)
 {
-    if(root == nullptr)
+    if (root == nullptr)
         return 0;
     int min = 100001;
     step111(root, min, 1);
@@ -1392,6 +1392,8 @@ void start297()
     // b.val = 5;
 }
 
+
+
 int main()
 {
     TreeNode root;
@@ -1438,6 +1440,7 @@ int main()
     // start701();
     // start105();
     // start297();
-    start111();
+    // start111();
+    start1372();
     return 0;
 }
