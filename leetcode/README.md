@@ -20,6 +20,8 @@
 
 ### Progress
 
+- [x] `662. Maximum Width of Binary Tree` 🟨 - [link](https://leetcode.com/problems/maximum-width-of-binary-tree/)
+    ✅[C++ solution](./662.MaximumWidthofBinaryTree/662.cpp)  - 2023/04/20
 - [x] `1372. Longest ZigZag Path in a Binary Tree` 🟨 - [link](https://leetcode.com/problems/longest-zigzag-path-in-a-binary-tree/)
     ✅[C++ solution](./1372.LongestZigZagPathinaBinaryTree/1372.cpp)  - 2023/04/19
 - [x] `1768. Merge Strings Alternately` 🟩 - [link](https://leetcode.com/problems/merge-strings-alternately/)
