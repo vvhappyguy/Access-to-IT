@@ -20,6 +20,8 @@
 
 ### Progress
 
+- [x] `118. Pascal's Triangle` 🟩 - [link](https://leetcode.com/problems/pascals-triangle/)
+    ✅[C++ solution](./118.Pascal'sTriangle/118.cpp)  - 2023/04/21
 - [x] `662. Maximum Width of Binary Tree` 🟨 - [link](https://leetcode.com/problems/maximum-width-of-binary-tree/)
     ✅[C++ solution](./662.MaximumWidthofBinaryTree/662.cpp)  - 2023/04/20
 - [x] `1372. Longest ZigZag Path in a Binary Tree` 🟨 - [link](https://leetcode.com/problems/longest-zigzag-path-in-a-binary-tree/)
