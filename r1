@@ -1,0 +1,22 @@
+from zipfile import ZipFile
+from datetime import datetime
+ 
+def is_slash(path):
+    if '/' in path.filename:
+        return path.filename.index('/')
+with ZipFile('workbook.zip') as zip_file:
+    info = sorted(zip_file.infolist(), key=lambda n: n.filename[is_slash(n):] if '/' in n.filename else n.filename)
+    for file in info:
+        if not file.is_dir():
+            if '/' in file.filename:
+                print(file.filename.split('/')[-1])
+                print(f'  Дата модификации файла: {datetime(file.date_time[0], file.date_time[1], file.date_time[2], file.date_time[3], file.date_time[4], file.date_time[5])}')
+                print(f'  Объем исходного файла: {file.file_size} байт(а)')
+                print(f'  Объем сжатого файла: {file.compress_size} байт(а)')
+            else:
+                print(file.filename)
+                print(f'  Дата модификации файла: {datetime(file.date_time[0], file.date_time[1], file.date_time[2], file.date_time[3], file.date_time[4], file.date_time[5])}')
+                print(f'  Объем исходного файла: {file.file_size} байт(а)')
+                print(f'  Объем сжатого файла: {file.compress_size} байт(а)')
+            if file != info[-1]:
+                print()
